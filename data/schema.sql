@@ -16,6 +16,11 @@ CREATE TABLE os(
 	name VARCHAR(20) NOT NULL
 );
 
+CREATE TABLE processor_oem(
+	id INT PRIMARY KEY,
+	name VARCHAR(20) NOT NULL
+);
+
 CREATE TABLE processor(
 	id INT PRIMARY KEY,
 	oem_id INT NOT NULL,
@@ -25,11 +30,6 @@ CREATE TABLE processor(
 	secondary_clock FLOAT(3),
 	gpu VARCHAR(20) NOT NULL,
 	FOREIGN KEY (oem_id) REFERENCES processor_oem(id)
-);
-
-CREATE TABLE processor_oem(
-	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE country(
@@ -46,6 +46,11 @@ CREATE TABLE vendor(
 	FOREIGN KEY (country_id) REFERENCES country(id)
 );
 
+CREATE TABLE colour_group(
+	id INT PRIMARY KEY,
+	name VARCHAR(10) NOT NULL
+);
+
 CREATE TABLE colours(
 	id INT PRIMARY KEY,
 	colour_group_id INT NOT NULL,
@@ -55,12 +60,47 @@ CREATE TABLE colours(
 	FOREIGN KEY (colour_group_id) REFERENCES colour_group(id)
 );
 
-CREATE TABLE colour_group(
+-- Phone Tables
+
+CREATE TABLE display(
 	id INT PRIMARY KEY,
 	name VARCHAR(10) NOT NULL
 );
 
--- Phone Tables
+CREATE TABLE autofocus(
+	id INT PRIMARY KEY,
+	autofocus_type VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE stabilization(
+	id INT PRIMARY KEY,
+	stabilization_type VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE camera_flash(
+	id INT PRIMARY KEY, 
+	flash_type VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE fast_charging(
+	id INT PRIMARY KEY,
+	name VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE usb(
+	id INT PRIMARY KEY,
+	name VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE sim(
+	id INT PRIMARY KEY,
+	name VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE glass(
+	id INT PRIMARY KEY,
+	name VARCHAR(20) NOT NULL
+);
 
 CREATE TABLE phone(
 	id INT PRIMARY KEY,
@@ -135,26 +175,6 @@ CREATE TABLE phone(
 	FOREIGN KEY (glass_id) REFERENCES glass(id)
 );
 
-CREATE TABLE display(
-	id INT PRIMARY KEY,
-	name VARCHAR(10) NOT NULL
-);
-
-CREATE TABLE autofocus(
-	id INT PRIMARY KEY,
-	autofocus_type VARCHAR(20) NOT NULL
-);
-
-CREATE TABLE stabilization(
-	id INT PRIMARY KEY,
-	stabilization_type VARCHAR(20) NOT NULL
-);
-
-CREATE TABLE camera_flash(
-	id INT PRIMARY KEY, 
-	flash_type VARCHAR(20) NOT NULL
-);
-
 CREATE TABLE phone_video_resolutions(
 	phone_id INT NOT NULL,
 	resolution INT NOT NULL,
@@ -171,44 +191,22 @@ CREATE TABLE phone_storage_configurations(
 	FOREIGN KEY (phone_id) REFERENCES phone(id)
 );
 
-CREATE TABLE fast_charging(
-	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
-);
-
-CREATE TABLE usb(
-	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
-);
-
-CREATE TABLE sim(
-	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
-);
-
-CREATE TABLE glass(
-	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL,
-);
-
 CREATE TABLE phone_colours(
 	phone_id INT NOT NULL,
 	colour_id INT NOT NULL,
 	PRIMARY KEY (phone_id, colour_id),
 	FOREIGN KEY (phone_id) REFERENCES phone(id),
-	FOREIGN KEY (colour_id) REFERENCES colour(id),
+	FOREIGN KEY (colour_id) REFERENCES colours(id)
 );
 
 CREATE TABLE phone_pricing(
 	phone_id INT NOT NULL,
 	vendor_id INT NOT NULL,
 	storage INT NOT NULL,
-	colour_id VARCHAR(20) NOT NULL,
+	colour_id INT NOT NULL,
 	url VARCHAR(100) NOT NULL,
 	price FLOAT(6) NOT NULL,
-	PRIMARY KEY (phone_id, vendor_id, storage, colour, url, price),
+	PRIMARY KEY (phone_id, vendor_id, storage, colour_id, url, price),
 	FOREIGN KEY (phone_id) REFERENCES phone(id),
-	FOREIGN KEY (vendor_id) REFERENCES vendor(id),
-	FOREIGN KEY (storage) REFERENCES phone_storage_configurations(storage),
-	FOREIGN KEY (colour) REFERENCES colours(id)
+	FOREIGN KEY (colour_id) REFERENCES colours(id)
 );
