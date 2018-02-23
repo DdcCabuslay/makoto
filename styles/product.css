@@ -1,0 +1,140 @@
+main {
+	max-width: 1400px;
+	margin: auto;
+}
+.product_overview {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.product_overview {
+	height: 75vh;
+}
+.product_media, .product_info {
+	width: 50%;
+}
+.product_media {
+	display: grid;
+	grid-template-rows: 1fr 75px;
+}
+.product_image {
+	display: block;
+	max-height: 80%;
+	width: 100%;
+	object-fit: contain;
+	margin: auto;
+}
+.image_thumbs {
+	text-align: center;
+	margin: auto;
+}
+.image_thumb {
+	cursor: pointer;
+	height: 50px;
+	margin: 0 0.5rem;
+}
+.info_window {
+	margin: 15vh auto;
+	min-width: 15rem;
+	max-width: 20rem;
+	border-radius: 4px;
+	box-shadow: 0px 4px 6px var(--shadow);
+	border-top: solid 6px var(--accent-main);
+}
+.info_window, .lowest_price_row {
+	display: grid;
+}
+.info_window h2, .info_window h3 {
+	margin: 0;
+	padding: 1rem;
+}
+.lowest_price_row {
+	grid-template-columns: 1fr auto;
+}
+.lowest_price_row > * {
+	align-self: center;
+	margin: 0.25rem 1rem;
+}
+.info_window_footer {
+	margin-top: 0.5rem;
+	padding: 0.5rem 0;
+}
+.info_window_footer button {
+	display: block;
+	margin: auto;
+}
+.product_details, .spec_table_spec {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+}
+.product_details {
+	margin: 0 1rem;
+}
+.product_details h3 {
+	margin-bottom: 0.5rem;
+	border-bottom: 0.1rem solid var(--accent-main);
+}
+.product_description, .product_specs {
+	width: 100%;
+}
+.spec_table {
+	margin-bottom: 1rem;
+}
+.spec_table_row {
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+.spec_table_row:first-child > h4 {
+	margin-top: 0.5rem;
+}
+.spec_table_row h4 {
+	margin-top: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+.spec_table_row svg {
+	align-self: end;
+	margin-bottom: 0.5rem;
+	cursor: pointer;
+}
+.spec_table_subtable {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-rows: auto;
+}
+.spec_table_subtable h5 {
+	margin: 0.5rem 0;
+}
+.spec_table_spec {
+	display: none;
+}
+@media (max-width: 767px) {
+	html {
+		background: #fff;
+	}
+	.product_overview {
+		flex-direction: column;
+		height: auto;
+	}
+	.product_media, .product_info, .info_window {
+		width: 100%;
+	}
+	.product_title {
+		border-bottom: 0.1rem solid var(--accent-main);
+	}
+	.info_window {
+		margin: 0 1rem;
+		max-width: calc(100% - 2rem);
+		box-shadow: none;
+		border-top: none;
+	}
+	.info_window h2, .info_window h3 {
+		padding: 1rem 0;
+	}
+	.lowest_price_row > * {
+		margin: 0.25rem 0;
+	}
+	.product_details {
+		grid-template-columns: 1fr;
+	}
+}

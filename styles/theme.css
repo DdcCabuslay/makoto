@@ -1,0 +1,41 @@
+:root {
+	--accent-main: hsl(203, 100%, 50%);
+	--accent-highlight: hsl(203, 100%, 60%);
+	--accent-dark: hsl(203, 100%, 40%);
+	--accent-text: hsl(203, 100%, 90%);
+	--text-dark-translucent: rgba(38, 38, 38, 0.8);
+	--shadow: hsla(0, 0%, 0%, 0.2);
+	--shadow-light: hsla(0, 0%, 0%, 0.08);
+}
+html, header {
+	background: hsl(0, 0%, 98%);
+	color: var(--text-dark-translucent);
+}
+h1, h2, h3, h4, .site_nav a:hover, .item_name, svg {
+	color: #000;
+}
+a, .site_nav a {
+	color: var(--text-dark-translucent);
+}
+a:hover {
+	color: var(--accent-dark);
+}
+button, input {
+	background-color: transparent;
+}
+button:hover, .hero {
+	background-color: var(--accent-text);
+}
+.filled_button {
+	background-color: var(--accent-main);
+	color: #fff;
+}
+.filled_button:hover {
+	background-color: var(--accent-highlight);	
+}
+button, .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg {
+	color: var(--accent-main);
+}
+.item, .info_window {
+	background-color: #fff;
+}
