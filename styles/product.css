@@ -17,6 +17,9 @@ main {
 	display: grid;
 	grid-template-rows: 1fr 75px;
 }
+.product_info {
+	display: flex;
+}
 .product_image {
 	display: block;
 	max-height: 80%;
@@ -34,34 +37,26 @@ main {
 	margin: 0 0.5rem;
 }
 .info_window {
-	margin: 15vh auto;
-	min-width: 15rem;
-	max-width: 20rem;
+	margin: auto;
+	width: 20rem;
 	border-radius: 4px;
 	box-shadow: 0px 4px 6px var(--shadow);
 	border-top: solid 6px var(--accent-main);
+	padding-bottom: 0.5rem;
 }
-.info_window, .lowest_price_row {
+.info_window, .price_listing_row {
 	display: grid;
 }
 .info_window h2, .info_window h3 {
 	margin: 0;
 	padding: 1rem;
 }
-.lowest_price_row {
+.price_listing_row {
 	grid-template-columns: 1fr auto;
 }
-.lowest_price_row > * {
+.price_listing_row > * {
 	align-self: center;
 	margin: 0.25rem 1rem;
-}
-.info_window_footer {
-	margin-top: 0.5rem;
-	padding: 0.5rem 0;
-}
-.info_window_footer button {
-	display: block;
-	margin: auto;
 }
 .product_details, .spec_table_spec {
 	display: grid;
@@ -108,6 +103,10 @@ main {
 .spec_table_spec {
 	display: none;
 }
+.footer_notes {
+	list-style-type: none;
+	padding: 1rem 1rem 0;
+}
 @media (max-width: 767px) {
 	html {
 		background: #fff;
@@ -131,7 +130,7 @@ main {
 	.info_window h2, .info_window h3 {
 		padding: 1rem 0;
 	}
-	.lowest_price_row > * {
+	.price_listing_row > * {
 		margin: 0.25rem 0;
 	}
 	.product_details {

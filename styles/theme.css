@@ -11,7 +11,7 @@ html, header {
 	background: hsl(0, 0%, 98%);
 	color: var(--text-dark-translucent);
 }
-h1, h2, h3, h4, .site_nav a:hover, .item_name, svg {
+h1, h2, h3, h4, .site_nav a:hover, svg {
 	color: #000;
 }
 a, .site_nav a {
@@ -20,21 +20,23 @@ a, .site_nav a {
 a:hover {
 	color: var(--accent-dark);
 }
-button, input {
+button, .button, input {
 	background-color: transparent;
 }
-button:hover, .hero {
+button:hover, .button:hover, .hero {
 	background-color: var(--accent-text);
+}
+button, .button, .stroked_button:hover, .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg {
+	color: var(--accent-main);
 }
 .filled_button {
 	background-color: var(--accent-main);
-	color: #fff;
 }
 .filled_button:hover {
-	background-color: var(--accent-highlight);	
+	background-color: var(--accent-highlight);
 }
-button, .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg {
-	color: var(--accent-main);
+.filled_button, .filled_button:hover {
+	color: #fff;
 }
 .item, .info_window {
 	background-color: #fff;

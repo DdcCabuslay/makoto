@@ -51,20 +51,20 @@
 				</section>
 			</div>
 			<div class="item_grid">
-				<div class="item">
+				<a href="phone.php" class="item">
 					<img class="item_img" src="../images/phones/0/0.png">
 					<div class="item_info">
-						<a href="phone.php" class="item_name">Pixel 2 XL</a>
+						<div class="item_name">Pixel 2 XL</div>
 						<span class="item_oem">Google</span>
-						<button class="item_price_button stroked_button">Pricing</button>
+						<span class="item_primary_price">$899</span>
 					</div>
-				</div>
+				</a>
 				<div class="item">
 					<img class="item_img" src="../images/phones/1/0.png">
 					<div class="item_info">
 						<a class="item_name">5T</a>
 						<span class="item_oem">OnePlus</span>
-						<button class="item_price_button stroked_button">Pricing</button>
+						<span class="item_primary_price">$659</span>
 					</div>
 				</div>
 				<div class="item">
@@ -72,7 +72,7 @@
 					<div class="item_info">
 						<a class="item_name">iPhone X</a>
 						<span class="item_oem">Apple</span>
-						<button class="item_price_button stroked_button">Pricing</button>
+						<span class="item_primary_price">$1319</span>
 					</div>
 				</div>
 				<div class="item">
@@ -80,7 +80,7 @@
 					<div class="item_info">
 						<a class="item_name">Galaxy S8</a>
 						<span class="item_oem">Samsung</span>
-						<button class="item_price_button stroked_button">Pricing</button>
+						<span class="item_primary_price">$1035</span>
 					</div>
 				</div>
 			</div>

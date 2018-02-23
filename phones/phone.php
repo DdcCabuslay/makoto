@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<link rel="stylesheet" type="text/css" href="../styles/theme.css">
 	<link rel="stylesheet" type="text/css" href="../styles/product.css">
-	<link rel="stylesheet" type="text/css" href="../styles/phones.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../styles/phones.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Google Pixel 2 XL - Makoto</title>
 </head>
@@ -46,25 +46,60 @@
 			<div class="product_info">
 				<div class="info_window">
 					<h2 class="product_title">Google Pixel 2 XL</h2>
-					<h3>Lowest Carrier Offer</h3>
-					<div class="lowest_price_row">
+					<h3>
+						Carrier Pricing
+						<small>
+							<a href="#carrier_notice">
+								<sup>1</sup>
+							</a>
+						</small>
+					</h3>
+					<div class="price_listing_row">
+						<span>Freedom Mobile</span>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.freedommobile.ca/plans-and-devices/mobile-devices/device-details/google-pixel-2-xl-(64gb)" class="button stroked_button">$0.00</a>
+					</div>
+					<div class="price_listing_row">
 						<span>Rogers</span>
-						<button class="filled_button">$100</button>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.rogers.com/web/totes/wireless/#/choose-phone" class="button stroked_button">$449.00</a>
 					</div>
-					<h3>Lowest Unlocked Price</h3>
-					<div class="lowest_price_row">
+					<div class="price_listing_row">
+						<span>Bell</span>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.bell.ca/Mobility/Products/Google-Pixel-2-XL" class="button stroked_button">$449.99</a>
+					</div>
+					<div class="price_listing_row">
+						<span>Telus</span>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.telus.com/en/on/mobility/phones/google-pixel-2-xl" class="button stroked_button">$450.00</a>
+					</div>
+					<div class="price_listing_row">
+						<span>Fido</span>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.fido.ca/nac/#/choose-phone" class="button stroked_button">$649.00</a>
+					</div>
+					<div class="price_listing_row">
+						<span>Virgin Mobile</span>
+						<a target="_blank" rel="noopener noreferrer" href="http://www.virginmobile.ca/en/phones/phone-details.html#!/2xlpixel/Black/64/TR18" class="button stroked_button">$649.99</a>
+					</div>
+					<div class="price_listing_row">
+						<span>Koodo Mobile</span>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.koodomobile.com/phones/google-pixel-2-xl" class="button stroked_button">$650.00</a>
+					</div>
+					<h3>
+						Unlocked Vendor Pricing
+						<small>
+							<a href="#vendor_notice">
+								<sup>2</sup>
+							</a>
+						</small>
+					</h3>
+					<div class="price_listing_row">
 						<span>Google Store</span>
-						<button class="filled_button">$899</button>
-					</div>
-					<div class="info_window_footer">
-						<button class="stroked_button">View More Prices</button>
+						<a target="_blank" rel="noopener noreferrer" href="https://store.google.com/config/pixel_2" class="button stroked_button">$899.00</a>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="product_details">
 			<div class="product_description">
-				<h3>Daniel's Thoughts</h3>
+				<h3>Daniel's Comments</h3>
 				<p>The newest Pixel from Google. The Pixel 2 XL sacrifices the headphone jack from last year for water resistance and dual front-firing speakers, which aren't very common on many flagship phones today. The Pixel 2 XL sports a taller 18:9 screen that flagships have started to adapt, giving you more screen in the same form factor. The camera in the Pixel 2 XL is one of the best among smartphones today, with Google boasting its use of machine learning to help you take the best pictures possible and for portrait photos. There have been some concerns about the screen being poor, but now it seems that they have been improved overall thanks to the mature production time of the phone.</p>
 			</div>
 			<div class="product_specs">
@@ -73,6 +108,9 @@
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Display</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							6.0" pOLED &middot; 2880 &times; 1440
+						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">6.0"</span>
 							<span class="spec_table_item">2880 &times; 1440</span>
@@ -83,6 +121,9 @@
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Cameras</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							Rear: 12.2 MP &middot; Front: 8 MP
+						</div>
 						<div class="spec_table_spec">
 							<div class="spec_table_subtable">
 								<h5>Rear Camera</h5>
@@ -117,6 +158,9 @@
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Processor</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							Qualcomm Snapdragon 835
+						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">Qualcomm Snapdragon 835</span>
 							<span class="spec_table_item">2.35 Ghz + 1.9 Ghz Octa-Core</span>
@@ -126,6 +170,9 @@
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Memory &amp; Storage</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							RAM: 4 GB &middot; Storage: Up to 128 GB
+						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">RAM: 4 GB</span>
 							<span class="spec_table_item">Internal Storage: 64 GB and 128 GB</span>
@@ -134,16 +181,22 @@
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Dimensions &amp; Weight</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							Dimensions: 157.9mm &times; 76.7mm &times; 7.9mm &middot; Weight: 175g
+						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">Length: 157.9mm</span>
 							<span class="spec_table_item">Width: 76.7mm</span>
 							<span class="spec_table_item">Height: 7.9mm</span>
-							<span class="spec_table_item">Weight: 175 g</span>
+							<span class="spec_table_item">Weight: 175g</span>
 						</div>
 					</div>
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Battery</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							3520 mAh
+						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">3520 mAh</span>
 							<span class="spec_table_item">Fast Charging via USB-PD</span>
@@ -152,6 +205,9 @@
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Wireless</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							Wi-Fi 2.4G + 5G &middot; Bluetooth 5.0
+						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">Wi-Fi 2.4G + 5 GHz 802.11a/b/g/n/ac 2x2 MIMO</span>
 							<span class="spec_table_item">Bluetooth 5.0 + LE</span>
@@ -161,6 +217,9 @@
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Ports</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							USB-C
+						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">No 3.5mm jack; dongle included</span>
 							<span class="spec_table_item">USB-C 3.1 Gen 1</span>
@@ -170,6 +229,9 @@
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Materials</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							Gorilla Glass 5 &middot; IP67
+						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">Gorilla Glass 5</span>
 							<span class="spec_table_item">IP67 Water Resistance</span>
@@ -179,5 +241,19 @@
 			</div>
 		</section>
 	</main>
+	<footer>
+		<ul class="footer_notes">
+			<li id="carrier_notice">
+				<small>
+					<sup>1</sup> Prices are based off carriers' two year term offerings and on the model with the smallest storage size. Prices may change depending on chosen storage available size, available colours, any ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
+				</small>
+			</li>
+			<li id="vendor_notice">
+				<small>
+					<sup>2</sup> Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
+				</small>
+			</li>
+		</ul>
+	</footer>
 </body>
 </html>
