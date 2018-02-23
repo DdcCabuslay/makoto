@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<link rel="stylesheet" type="text/css" href="../styles/theme.css">
 	<link rel="stylesheet" type="text/css" href="../styles/product.css">
-	<!-- <link rel="stylesheet" type="text/css" href="../styles/phones.css"> -->
+	<link rel="stylesheet" type="text/css" href="../styles/phones.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Google Pixel 2 XL - Makoto</title>
 </head>
@@ -106,10 +106,27 @@
 				<h3>Tech Specifications</h3>
 				<div class="spec_table">
 					<div class="spec_table_row">
+						<h4 class="spec_table_header">Operating System</h4>
+						<i class="fas fa-angle-down fa-fw"></i>
+						<div class="spec_table_spec_overview">
+							Android 8.0.0 Oreo
+						</div>
+						<div class="spec_table_spec">
+							<span class="spec_table_item">Android 8.0.0 Oreo preinstalled</span>
+							<span class="spec_table_item">Upgradable to Android 8.1.0 Oreo
+								<small>
+									<a href="#update_notice">
+										<sup>3</sup>
+									</a>
+								</small>
+							</span>
+						</div>
+					</div>
+					<div class="spec_table_row">
 						<h4 class="spec_table_header">Display</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
 						<div class="spec_table_spec_overview">
-							6.0" pOLED &middot; 2880 &times; 1440
+							6.0" 1440p pOLED
 						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">6.0"</span>
@@ -242,18 +259,32 @@
 		</section>
 	</main>
 	<footer>
-		<ul class="footer_notes">
-			<li id="carrier_notice">
+		<section class="footer_notes">
+			<div id="carrier_notice">
 				<small>
-					<sup>1</sup> Prices are based off carriers' two year term offerings and on the model with the smallest storage size. Prices may change depending on chosen storage available size, available colours, any ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
+					<sup>1</sup>
+					<span>
+						Prices are based off carriers' two year term offerings and on the model with the smallest storage size. Prices may change depending on chosen storage available size, available colours, any ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
+					</span>
 				</small>
-			</li>
-			<li id="vendor_notice">
+			</div>
+			<div id="vendor_notice">
 				<small>
-					<sup>2</sup> Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
+					<sup>2</sup>
+					<span>
+						Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
+					</span>
 				</small>
-			</li>
-		</ul>
+			</div>
+			<div id="update_notice">
+				<small>
+					<sup>3</sup>
+					<span>
+						Updates may be subject to carrier approval and testing before being released. If you purchase this phone through a carrier, check with them to find out when an update will be available for this device.
+					</span>
+				</small>
+			</div>
+		</section>
 	</footer>
 </body>
 </html>

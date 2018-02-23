@@ -8,7 +8,7 @@ main {
 	width: 100%;
 }
 .product_overview {
-	height: 75vh;
+	min-height: 75vh;
 }
 .product_media, .product_info {
 	width: 50%;
@@ -100,12 +100,19 @@ main {
 .spec_table_subtable h5 {
 	margin: 0.5rem 0;
 }
-.spec_table_spec {
+.spec_table_spec_overview {
 	display: none;
 }
 .footer_notes {
-	list-style-type: none;
-	padding: 1rem 1rem 0;
+	padding: 1rem;
+}
+.footer_notes small {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	margin-bottom: 0.25rem;
+}
+.footer_notes sup {
+	margin-right: 0.25rem;
 }
 @media (max-width: 767px) {
 	html {
