@@ -46,6 +46,17 @@
 			<div class="product_info">
 				<div class="info_window">
 					<h2 class="product_title">Google Pixel 2 XL</h2>
+					<h3>Colours</h3>
+					<div class="colour_row">
+						<button class="colour_button active_colour">
+							<div class="colour" style="background: linear-gradient(#0d0d16, #0d0d16 50%, #323233 51%);"></div>
+							<div class="colour_name">Just Black</div>
+						</button>
+						<button class="colour_button">
+							<div class="colour" style="background: linear-gradient(#0d0d16, #0d0d16 50%, #edeff0 51%);"></div>
+							<div class="colour_name">Black &amp; White</div>
+						</button>
+					</div>
 					<h3>
 						Carrier Pricing
 						<small>

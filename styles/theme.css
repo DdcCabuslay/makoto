@@ -14,7 +14,7 @@ html, header {
 h1, h2, h3, h4, .site_nav a:hover, svg {
 	color: #000;
 }
-a, .site_nav a {
+a, .site_nav a, .colour_button {
 	color: var(--text-dark-translucent);
 }
 a:hover {
@@ -23,7 +23,10 @@ a:hover {
 button, .button, input {
 	background-color: transparent;
 }
-button:hover, .button:hover, .hero {
+button:hover, .button:hover{
+	background-color: var(--shadow-light);
+}
+.hero {
 	background-color: var(--accent-text);
 }
 button, .button, .stroked_button:hover, .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg {
@@ -40,4 +43,7 @@ button, .button, .stroked_button:hover, .site_nav > .nav_selected, .site_nav > .
 }
 .item, .info_window {
 	background-color: #fff;
+}
+.active_colour, .active_colour .colour {
+	color: var(--accent-main);
 }
