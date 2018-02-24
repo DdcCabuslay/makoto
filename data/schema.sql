@@ -157,6 +157,8 @@ CREATE TABLE phone(
 	-- materials
 	glass_id INT,
 	water_resistance INT,
+	-- misc
+	url VARCHAR(150) NOT NULL,
 	FOREIGN KEY (oem_id) REFERENCES oem(id),
 	FOREIGN KEY (os_id) REFERENCES os(id),
 	FOREIGN KEY (upgradable_os_id) REFERENCES os(id),
@@ -204,7 +206,7 @@ CREATE TABLE phone_pricing(
 	vendor_id INT NOT NULL,
 	storage INT NOT NULL,
 	colour_id INT NOT NULL,
-	url VARCHAR(100) NOT NULL,
+	url VARCHAR(150) NOT NULL,
 	price FLOAT(6) NOT NULL,
 	PRIMARY KEY (phone_id, vendor_id, storage, colour_id, url, price),
 	FOREIGN KEY (phone_id) REFERENCES phone(id),
