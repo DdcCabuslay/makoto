@@ -1,11 +1,6 @@
-main {
-	max-width: 1400px;
-	margin: auto;
-}
 .product_overview {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
 }
 .product_overview {
 	min-height: 75vh;
@@ -90,7 +85,6 @@ main {
 }
 .product_details h3 {
 	margin-bottom: 0.5rem;
-	border-bottom: 0.1rem solid var(--accent-main);
 }
 .product_description, .product_specs {
 	width: 100%;
@@ -124,7 +118,7 @@ main {
 	display: none;
 }
 .footer_notes {
-	padding: 1rem;
+	padding: 1rem 0;
 }
 .footer_notes small {
 	grid-template-columns: auto 1fr;
@@ -148,8 +142,7 @@ main {
 		border-bottom: 0.1rem solid var(--accent-main);
 	}
 	.info_window {
-		margin: 0 1rem;
-		max-width: calc(100% - 2rem);
+		max-width: 100%;
 		box-shadow: none;
 		border-top: none;
 	}

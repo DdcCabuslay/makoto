@@ -268,34 +268,34 @@
 				</div>
 			</div>
 		</section>
+		<footer>
+			<section class="footer_notes">
+				<div id="carrier_notice">
+					<small>
+						<sup>1</sup>
+						<span>
+							Prices are based off carriers' two year term offerings and on the model with the smallest storage size. Prices may change depending on chosen storage available size, available colours, any ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
+						</span>
+					</small>
+				</div>
+				<div id="vendor_notice">
+					<small>
+						<sup>2</sup>
+						<span>
+							Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
+						</span>
+					</small>
+				</div>
+				<div id="update_notice">
+					<small>
+						<sup>3</sup>
+						<span>
+							Updates may be subject to carrier approval and testing before being released. If you purchase this phone through a carrier, check with them to find out when an update will be available for this device.
+						</span>
+					</small>
+				</div>
+			</section>
+		</footer>
 	</main>
-	<footer>
-		<section class="footer_notes">
-			<div id="carrier_notice">
-				<small>
-					<sup>1</sup>
-					<span>
-						Prices are based off carriers' two year term offerings and on the model with the smallest storage size. Prices may change depending on chosen storage available size, available colours, any ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
-					</span>
-				</small>
-			</div>
-			<div id="vendor_notice">
-				<small>
-					<sup>2</sup>
-					<span>
-						Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
-					</span>
-				</small>
-			</div>
-			<div id="update_notice">
-				<small>
-					<sup>3</sup>
-					<span>
-						Updates may be subject to carrier approval and testing before being released. If you purchase this phone through a carrier, check with them to find out when an update will be available for this device.
-					</span>
-				</small>
-			</div>
-		</section>
-	</footer>
 </body>
 </html>

@@ -1,6 +1,8 @@
-:root {
-	--accent-main: hsl(187, 100%, 41%);
-	--accent-highlight: hsl(187, 100%, 46%);
-	--accent-dark: hsl(187, 100%, 25%);
-	--accent-text: hsl(187, 100%, 90%);
+.hero {
+	background-color: hsl(187, 100%, 90%);
+}
+.hero img {
+	width: 50%;
+	left: 25%;	
+	top: 100px;
 }

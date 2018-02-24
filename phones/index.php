@@ -37,17 +37,16 @@
 	<main>
 		<section class="hero">
 			<h1>Phones</h1>
-			<div class="hero_blurb">There are a lot of different smartphones to choose from, and sometimes it may be difficult to make a choice. Here are some of my favourites.</div>
+			<img class="hero_img_lower_right" src="../images/phones/home/0.png">
 		</section>
-		<section id="phones" class="content">
+		<section id="phones">
 			<div class="item_grid_header">
 				<section>
-					<!-- may be used for filters -->
+					<button>Filter</button>
 				</section>
 				<section>
-					<button>Compare</button>
+					<!-- <button>Compare</button> -->
 					<button>Sort</button>
-					<button>Filter</button>
 				</section>
 			</div>
 			<div class="item_grid">
