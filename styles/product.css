@@ -33,13 +33,13 @@
 }
 .info_window {
 	margin: auto;
-	width: 25rem;
+	width: 20rem;
 	border-radius: 4px;
 	box-shadow: 0px 4px 6px var(--shadow);
-	border-top: solid 6px var(--text-dark-translucent);
-	padding: 1.5rem 0 0.5rem;
+	border-top: solid 6px var(--accent-main);
+	padding: 0 0 0.5rem;
 }
-.info_window, .price_listing_row, .colour_row,
+.info_window, .price_listing_row, .info_window_row,
 .product_description, .product_specs, .spec_table_spec, .spec_table_row, .spec_table_subtable,
 .footer_notes small {
 	display: grid;
@@ -48,23 +48,29 @@
 	margin: 0;
 	padding: 1rem;
 }
-.colour_row {
-	grid-template-columns: 1fr 1fr 1fr;
+.info_window_row {
 	margin: 0 1rem;
-	grid-gap: 1rem;
+	grid-gap: 0.5rem;
+	grid-template-columns: 1fr;
+}
+.info_window_row button {
+	text-align: left;
 }
 .colour_button {
 	text-align: center;
 	cursor: pointer;
 	padding: 0.5rem;
+	display: flex;
 }
 .colour {
 	height: 30px;
 	width: 30px;
-	margin: auto;
-	margin-bottom: 0.5rem;
 	border-radius: 50%;
 	border: 1px solid #aaa;
+}
+.colour_name {
+	align-self: center;
+	margin-left: 0.5rem;
 }
 .info_window_footer {
 	margin: 0.5rem 0;

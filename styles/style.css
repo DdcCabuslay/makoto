@@ -53,7 +53,7 @@ button, .button {
 	border-radius: 4px;
 	cursor: pointer;
 	text-transform: capitalize;
-	transition: background-color 0.2s;
+	transition: background 0.2s;
 }
 input {
 	border: none;

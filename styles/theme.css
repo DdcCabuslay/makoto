@@ -1,6 +1,8 @@
 :root {
 	--accent-main: hsl(203, 100%, 50%);
+	--accent-gradient: hsl(213, 100%, 50%);
 	--accent-highlight: hsl(203, 100%, 60%);
+	--accent-gradient-highlight: hsl(213, 100%, 60%);
 	--accent-dark: hsl(203, 100%, 40%);
 	--accent-text: hsl(203, 100%, 90%);
 	--text-dark-translucent: rgba(38, 38, 38, 0.8);
@@ -30,16 +32,16 @@ a, button, .button, button:hover, .button:hover, .hero h1 {
 	color: var(--text-dark-translucent);
 }
 button, .button, input {
-	background-color: transparent;
+	background: transparent;
 }
 button:hover, .button:hover {
-	background-color: var(--shadow-light);
+	background: var(--shadow-light);
 }
 .filled_button {
-	background-color: var(--accent-main);
+	background: linear-gradient(var(--accent-main), var(--accent-gradient));
 }
 .filled_button:hover {
-	background-color: var(--accent-highlight);
+	background: linear-gradient(var(--accent-highlight), var(--accent-gradient-highlight));
 }
 .filled_button, .filled_button:hover {
 	color: #fff;
@@ -47,6 +49,7 @@ button:hover, .button:hover {
 .opaque, .item {
 	background-color: #fff;
 }
-.active_colour, .active_colour .colour {
+.active_colour, .active_storage {
+	background-color: var(--shadow-light);
 	color: var(--accent-main);
 }

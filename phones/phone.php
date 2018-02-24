@@ -39,7 +39,7 @@
 			<h1 class="product_title">Google Pixel 2 XL</h1>
 		</section>
 		<section>
-			<button class="filled_button">Official Website</button>
+			<a target="_blank" rel="noopener noreferrer" href="https://store.google.com/product/pixel_2" class="button stroked_button">Official Website</a>
 		</section>
 	</header>
 	<main class="opaque">
@@ -53,7 +53,8 @@
 			</div>
 			<div class="product_info">
 				<div class="info_window">
-					<div class="colour_row">
+					<h3>Colours</h3>
+					<div class="info_window_row colour_row">
 						<button class="colour_button active_colour">
 							<div class="colour" style="background: linear-gradient(#0d0d16, #0d0d16 50%, #323233 51%);"></div>
 							<div class="colour_name">Just Black</div>
@@ -63,10 +64,19 @@
 							<div class="colour_name">Black &amp; White</div>
 						</button>
 					</div>
-					<!-- <div class="info_window_footer">
+					<h3>Storage Options</h3>
+					<div class="info_window_row storage_row">
+						<button class="storage_button active_storage">
+							<div class="storage_size">64 GB</div>
+						</button>
+						<button class="storage_button">
+							<div class="storage_size">128 GB</div>
+						</button>
+					</div>
+					<div class="info_window_footer">
 						<button class="filled_button">Check Pricing</button>
-					</div> -->
-					<h3>
+					</div>
+					<!-- <h3>
 						Carrier Pricing
 						<small>
 							<a href="#carrier_notice">
@@ -113,7 +123,7 @@
 					<div class="price_listing_row">
 						<span>Google Store</span>
 						<a target="_blank" rel="noopener noreferrer" href="https://store.google.com/config/pixel_2" class="button stroked_button">$899.00</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
