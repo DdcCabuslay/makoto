@@ -2,7 +2,7 @@
 <html>
 <head>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<link rel="stylesheet" type="text/css" href="../styles/theme.css">
 	<link rel="stylesheet" type="text/css" href="../styles/product.css">
@@ -34,7 +34,15 @@
 			</form>
 		</section>
 	</header>
-	<main>
+	<header class="subheader">
+		<section>
+			<h1 class="product_title">Google Pixel 2 XL</h1>
+		</section>
+		<section>
+			<button class="filled_button">Official Website</button>
+		</section>
+	</header>
+	<main class="opaque">
 		<section class="product_overview">
 			<div class="product_media">
 				<img class="product_image" src="../images/phones/0/0.png">
@@ -45,8 +53,6 @@
 			</div>
 			<div class="product_info">
 				<div class="info_window">
-					<h2 class="product_title">Google Pixel 2 XL</h2>
-					<h3>Colours</h3>
 					<div class="colour_row">
 						<button class="colour_button active_colour">
 							<div class="colour" style="background: linear-gradient(#0d0d16, #0d0d16 50%, #323233 51%);"></div>
@@ -57,6 +63,9 @@
 							<div class="colour_name">Black &amp; White</div>
 						</button>
 					</div>
+					<!-- <div class="info_window_footer">
+						<button class="filled_button">Check Pricing</button>
+					</div> -->
 					<h3>
 						Carrier Pricing
 						<small>
@@ -270,29 +279,23 @@
 		</section>
 		<footer>
 			<section class="footer_notes">
-				<div id="carrier_notice">
-					<small>
-						<sup>1</sup>
-						<span>
-							Prices are based off carriers' two year term offerings and on the model with the smallest storage size. Prices may change depending on chosen storage available size, available colours, any ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
-						</span>
-					</small>
+				<div class="footer_note" id="carrier_notice">
+					<sup>1</sup>
+					<span>
+						Prices are based off carriers' two year term offerings and on the model with the smallest storage size. Prices may change depending on chosen storage available size, available colours, any ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
+					</span>
 				</div>
-				<div id="vendor_notice">
-					<small>
-						<sup>2</sup>
-						<span>
-							Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
-						</span>
-					</small>
+				<div class="footer_note" id="vendor_notice">
+					<sup>2</sup>
+					<span>
+						Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
+					</span>
 				</div>
-				<div id="update_notice">
-					<small>
-						<sup>3</sup>
-						<span>
-							Updates may be subject to carrier approval and testing before being released. If you purchase this phone through a carrier, check with them to find out when an update will be available for this device.
-						</span>
-					</small>
+				<div class="footer_note" id="update_notice">
+					<sup>3</sup>
+					<span>
+						Updates may be subject to carrier approval and testing before being released. If you purchase this phone through a carrier, check with them to find out when an update will be available for this device.
+					</span>
 				</div>
 			</section>
 		</footer>

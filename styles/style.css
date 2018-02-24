@@ -1,5 +1,5 @@
 html, button, input {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 body {
 	margin: 0;
@@ -11,11 +11,37 @@ main > *:not(.hero) {
 header {
 	height: 48px;
 }
-header, h1, h2, h3, button, .button {
-	font-weight: 700;
+header, header section {
+	display: flex;
+	flex-direction: row;
 }
-h1, h2, h3, h4, h5 {
-	font-family: 'Noto Sans', sans-serif;
+header section {
+	width: 700px;
+}
+header section:first-child {
+	justify-content: flex-start;
+	margin-left: auto;
+}
+header section:last-child {
+	justify-content: flex-end;
+	margin-right: auto;
+}
+header section > * {
+	margin: 0 0.5rem;
+	align-self: center;
+	white-space: nowrap;
+}
+header section > *:first-child {
+	margin-left: 1rem;
+}
+header section > *:last-child {
+	/*margin-right: 1rem;*/
+}
+header, button, .button {
+	font-size: 0.875em;	
+}
+h1, h2, h3, button, .button {
+	font-weight: 600;
 }
 a, svg {
 	text-decoration: none;
@@ -27,7 +53,6 @@ button, .button {
 	border-radius: 4px;
 	cursor: pointer;
 	text-transform: capitalize;
-	font-size: 0.875em;
 	transition: background-color 0.2s;
 }
 input {
@@ -37,31 +62,6 @@ input {
 }
 footer {
 	margin-bottom: 0;
-}
-.site_header, .site_header section {
-	display: flex;
-	flex-direction: row;
-}
-.site_header section {
-	width: 700px;
-}
-.site_header section:first-child {
-	justify-content: flex-start;
-	margin-left: auto;
-}
-.site_header section:last-child {
-	justify-content: flex-end;
-	margin-right: auto;
-}
-.site_header section > * {
-	margin: 0 0.5rem;
-	align-self: center;
-}
-.site_header section > *:first-child {
-	margin-left: 1rem;
-}
-.site_header section > *:last-child {
-	/*margin-right: 1rem;*/
 }
 .site_nav a {
 	transition: color 0.2s;
@@ -106,15 +106,20 @@ footer {
 		margin: 0 1rem;
 	}	
 }
+@media (max-width: 767px) {
+	.nav_title {
+		display: none;
+	}	
+}
 @media (max-width: 480px) {
 	.site_nav svg {
 		margin-left: 0.6rem;
 		margin-right: 0.5rem;
 	}
-	.nav_title {
-		display: none;
-	}
 	.search_form input {
 		width: 125px;
+	}
+	.hero {
+		height: 250px;
 	}
 }

@@ -7,7 +7,7 @@
 	--shadow: hsla(0, 0%, 0%, 0.2);
 	--shadow-light: hsla(0, 0%, 0%, 0.08);
 }
-html {
+html, .subheader {
 	background: hsl(0, 0%, 98%);
 	color: var(--text-dark-translucent);
 }
@@ -44,7 +44,7 @@ button:hover, .button:hover {
 .filled_button, .filled_button:hover {
 	color: #fff;
 }
-.item, .info_window {
+.opaque, .item {
 	background-color: #fff;
 }
 .active_colour, .active_colour .colour {

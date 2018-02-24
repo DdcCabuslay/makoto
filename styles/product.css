@@ -3,7 +3,7 @@
 	flex-direction: row;
 }
 .product_overview {
-	min-height: 75vh;
+	min-height: 60vh;
 }
 .product_media, .product_info {
 	width: 50%;
@@ -33,14 +33,14 @@
 }
 .info_window {
 	margin: auto;
-	width: 20rem;
+	width: 25rem;
 	border-radius: 4px;
 	box-shadow: 0px 4px 6px var(--shadow);
-	border-top: solid 6px var(--accent-main);
-	padding-bottom: 0.5rem;
+	border-top: solid 6px var(--text-dark-translucent);
+	padding: 1.5rem 0 0.5rem;
 }
 .info_window, .price_listing_row, .colour_row,
-.product_details, .spec_table_spec, .spec_table_row, .spec_table_subtable,
+.product_description, .product_specs, .spec_table_spec, .spec_table_row, .spec_table_subtable,
 .footer_notes small {
 	display: grid;
 }
@@ -56,7 +56,7 @@
 .colour_button {
 	text-align: center;
 	cursor: pointer;
-	padding: 0.5rem 0;
+	padding: 0.5rem;
 }
 .colour {
 	height: 30px;
@@ -66,8 +66,12 @@
 	border-radius: 50%;
 	border: 1px solid #aaa;
 }
-.colour_name {
-	font-size: small;
+.info_window_footer {
+	margin: 0.5rem 0;
+}
+.info_window_footer button {
+	display: block;
+	margin: auto;
 }
 .price_listing_row {
 	grid-template-columns: 1fr auto;
@@ -76,18 +80,24 @@
 	align-self: center;
 	margin: 0.25rem 1rem;
 }
-.product_details, .spec_table_spec {
+.price_listing_row > *, .spec_table_spec_overview, .spec_table_spec .spec_table_item {
+	font-size: 0.875em;
+}
+.spec_table_spec {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 1rem;
-}
-.product_details {
-	margin: 0 1rem;
 }
 .product_details h3 {
 	margin-bottom: 0.5rem;
 }
 .product_description, .product_specs {
-	width: 100%;
+	grid-template-columns: auto 1fr;
+	grid-gap: 2rem;
+	margin: auto;
+	max-width: 1100px;
+}
+.product_description > *, .product_specs > * {
+	margin-top: 1rem;
 }
 .spec_table {
 	margin-bottom: 1rem;
@@ -96,7 +106,7 @@
 	grid-template-columns: 1fr auto;
 }
 .spec_table_row:first-child > h4 {
-	margin-top: 0.5rem;
+	margin-top: 0rem;
 }
 .spec_table_row h4 {
 	margin-top: 1.5rem;
@@ -114,15 +124,16 @@
 .spec_table_subtable h5 {
 	margin: 0.5rem 0;
 }
-.spec_table_spec_overview {
+.spec_table_spec {
 	display: none;
 }
 .footer_notes {
 	padding: 1rem 0;
 }
-.footer_notes small {
+.footer_note {
 	grid-template-columns: auto 1fr;
 	margin-bottom: 0.25rem;
+	font-size: 0.625em;
 }
 .footer_notes sup {
 	margin-right: 0.25rem;
@@ -138,9 +149,6 @@
 	.product_media, .product_info, .info_window {
 		width: 100%;
 	}
-	.product_title {
-		border-bottom: 0.1rem solid var(--accent-main);
-	}
 	.info_window {
 		max-width: 100%;
 		box-shadow: none;
@@ -152,7 +160,8 @@
 	.price_listing_row > * {
 		margin: 0.25rem 0;
 	}
-	.product_details {
+	.product_description, .product_specs {
 		grid-template-columns: 1fr;
+		grid-gap: 0;
 	}
 }
