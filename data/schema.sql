@@ -6,41 +6,41 @@ SET search_path to makoto;
 
 CREATE TABLE oem(
 	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL,
-	url VARCHAR(50) NOT NULL
+	name TEXT NOT NULL,
+	url TEXT NOT NULL
 );
 
 CREATE TABLE os(
 	id INT PRIMARY KEY,
 	version FLOAT(10) NOT NULL,
-	name VARCHAR(20) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE processor_oem(
 	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE processor(
 	id INT PRIMARY KEY,
 	oem_id INT NOT NULL,
-	model VARCHAR(20) NOT NULL,
+	model TEXT NOT NULL,
 	cores INT NOT NULL,
 	main_clock FLOAT(3) NOT NULL,
 	secondary_clock FLOAT(3),
-	gpu VARCHAR(20) NOT NULL,
+	gpu TEXT NOT NULL,
 	FOREIGN KEY (oem_id) REFERENCES processor_oem(id)
 );
 
 CREATE TABLE country(
 	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE vendor(
 	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL,
-	url VARCHAR(50) NOT NULL,
+	name TEXT NOT NULL,
+	url TEXT NOT NULL,
 	country_id INT NOT NULL,
 	is_carrier BOOLEAN NOT NULL,
 	FOREIGN KEY (country_id) REFERENCES country(id)
@@ -48,15 +48,15 @@ CREATE TABLE vendor(
 
 CREATE TABLE colour_group(
 	id INT PRIMARY KEY,
-	name VARCHAR(10) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE colours(
 	id INT PRIMARY KEY,
 	colour_group_id INT NOT NULL,
-	colour_name VARCHAR(20) NOT NULL,
-	colour_hex VARCHAR(6) NOT NULL,
-	secondary_colour_hex VARCHAR(6),
+	colour_name TEXT NOT NULL,
+	colour_hex TEXT NOT NULL,
+	secondary_colour_hex TEXT,
 	FOREIGN KEY (colour_group_id) REFERENCES colour_group(id)
 );
 
@@ -64,48 +64,48 @@ CREATE TABLE colours(
 
 CREATE TABLE display(
 	id INT PRIMARY KEY,
-	name VARCHAR(10) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE autofocus(
 	id INT PRIMARY KEY,
-	autofocus_type VARCHAR(20) NOT NULL
+	autofocus_type TEXT NOT NULL
 );
 
 CREATE TABLE stabilization(
 	id INT PRIMARY KEY,
-	stabilization_type VARCHAR(20) NOT NULL
+	stabilization_type TEXT NOT NULL
 );
 
 CREATE TABLE camera_flash(
 	id INT PRIMARY KEY, 
-	flash_type VARCHAR(20) NOT NULL
+	flash_type TEXT NOT NULL
 );
 
 CREATE TABLE fast_charging(
 	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE usb(
 	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE sim(
 	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE glass(
 	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL
+	name TEXT NOT NULL
 );
 
 CREATE TABLE phone(
 	id INT PRIMARY KEY,
 	oem_id INT NOT NULL,
-	model VARCHAR(50) NOT NULL,
+	model TEXT NOT NULL,
 	release TIMESTAMP NOT NULL,
 	-- operating system
 	os_id INT NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE phone(
 	display_size FLOAT(3) NOT NULL,
 	display_height INT NOT NULL,
 	display_width INT NOT NULL,
-	display_aspect_ratio VARCHAR(4) NOT NULL,
+	display_aspect_ratio TEXT NOT NULL,
 	display_type_id INT NOT NULL,
 	-- camera
 	main_camera_res FLOAT(3) NOT NULL,
@@ -158,7 +158,7 @@ CREATE TABLE phone(
 	glass_id INT,
 	water_resistance INT,
 	-- misc
-	url VARCHAR(150) NOT NULL,
+	url TEXT NOT NULL,
 	FOREIGN KEY (oem_id) REFERENCES oem(id),
 	FOREIGN KEY (os_id) REFERENCES os(id),
 	FOREIGN KEY (upgradable_os_id) REFERENCES os(id),
@@ -206,7 +206,7 @@ CREATE TABLE phone_pricing(
 	vendor_id INT NOT NULL,
 	storage INT NOT NULL,
 	colour_id INT NOT NULL,
-	url VARCHAR(150) NOT NULL,
+	url TEXT NOT NULL,
 	price FLOAT(6) NOT NULL,
 	PRIMARY KEY (phone_id, vendor_id, storage, colour_id, url, price),
 	FOREIGN KEY (phone_id) REFERENCES phone(id),
