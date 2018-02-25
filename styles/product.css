@@ -113,8 +113,8 @@
 .highlights_table ul li:before {
     display: block;
     float: left;
-    width: 1.2em;
-    margin: 0 -1.2em;
+    width: 1.25em;
+    margin-left: -1.25em;
     font-weight: 600;
 }
 .positive_highlights li:before {
@@ -122,7 +122,7 @@
     color: var(--accent-main);
 }
 .negative_highlights li:before {
-	content: "-";
+	content: "\2212";
     color: var(--text-dark-translucent);
 }
 .spec_table {
@@ -193,7 +193,7 @@
 	.price_listing_row > * {
 		margin: 0.25rem 0;
 	}
-	.product_details > div {
+	.product_details > div, .highlights_table {
 		grid-template-columns: 1fr;
 		grid-gap: 0;
 	}

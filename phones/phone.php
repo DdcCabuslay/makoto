@@ -133,7 +133,8 @@
 						<li>Front-firing stereo speakers</li>
 					</ul>
 					<ul class="negative_highlights">
-						<li>pOLED screen may have poor colour reproduction</li>
+						<li>No headphone jack</li>
+						<li>pOLED screen has subpar colour reproduction and viewing angles</li>
 					</ul>
 				</div>
 			</div>
