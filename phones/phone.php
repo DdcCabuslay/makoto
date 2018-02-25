@@ -27,7 +27,7 @@
 		</section>
 		<section>
 			<form class="search_form">
-				<input>
+				<input placeholder="Search Makoto">
 				<button class="search_button">
 					<i class="fas fa-search fa-fw"></i>
 				</button>
@@ -55,21 +55,21 @@
 				<div class="info_window">
 					<h3>Colours</h3>
 					<div class="info_window_row colour_row">
-						<button class="colour_button active_colour">
+						<button class="info_window_row_button colour_button active_colour">
 							<div class="colour" style="background: linear-gradient(#0d0d16, #0d0d16 50%, #323233 51%);"></div>
 							<div class="colour_name">Just Black</div>
 						</button>
-						<button class="colour_button">
+						<button class="info_window_row_button colour_button">
 							<div class="colour" style="background: linear-gradient(#0d0d16, #0d0d16 50%, #edeff0 51%);"></div>
 							<div class="colour_name">Black &amp; White</div>
 						</button>
 					</div>
 					<h3>Storage Options</h3>
 					<div class="info_window_row storage_row">
-						<button class="storage_button active_storage">
+						<button class="info_window_row_button storage_button active_storage">
 							<div class="storage_size">64 GB</div>
 						</button>
-						<button class="storage_button">
+						<button class="info_window_row_button storage_button">
 							<div class="storage_size">128 GB</div>
 						</button>
 					</div>
@@ -78,11 +78,9 @@
 					</div>
 					<!-- <h3>
 						Carrier Pricing
-						<small>
-							<a href="#carrier_notice">
+							<a class="footnote_ref" href="#carrier_notice">
 								<sup>1</sup>
 							</a>
-						</small>
 					</h3>
 					<div class="price_listing_row">
 						<span>Freedom Mobile</span>
@@ -114,11 +112,9 @@
 					</div>
 					<h3>
 						Unlocked Vendor Pricing
-						<small>
-							<a href="#vendor_notice">
+							<a class="footnote_ref" href="#vendor_notice">
 								<sup>2</sup>
 							</a>
-						</small>
 					</h3>
 					<div class="price_listing_row">
 						<span>Google Store</span>
@@ -128,12 +124,25 @@
 			</div>
 		</section>
 		<section class="product_details">
-			<div class="product_description">
+			<div id="product_release">
+				<h3>Highlights</h3>
+				<div class="highlights_table">
+					<ul class="positive_highlights">
+						<li>Best in class camera</li>
+						<li>Water resistant</li>
+						<li>Front-firing stereo speakers</li>
+					</ul>
+					<ul class="negative_highlights">
+						<li>pOLED screen may have poor colour reproduction</li>
+					</ul>
+				</div>
+			</div>
+			<div id="product_description">
 				<h3>Daniel's Comments</h3>
 				<p>The newest Pixel from Google. The Pixel 2 XL sacrifices the headphone jack from last year for water resistance and dual front-firing speakers, which aren't very common on many flagship phones today. The Pixel 2 XL sports a taller 18:9 screen that flagships have started to adapt, giving you more screen in the same form factor. The camera in the Pixel 2 XL is one of the best among smartphones today, with Google boasting its use of machine learning to help you take the best pictures possible and for portrait photos. There have been some concerns about the screen being poor, but now it seems that they have been improved overall thanks to the mature production time of the phone.</p>
 			</div>
-			<div class="product_specs">
-				<h3>Tech Specifications</h3>
+			<div id="product_specs">
+				<h3>Technical Specifications</h3>
 				<div class="spec_table">
 					<div class="spec_table_row">
 						<h4 class="spec_table_header">Operating System</h4>
@@ -144,11 +153,9 @@
 						<div class="spec_table_spec">
 							<span class="spec_table_item">Android 8.0.0 Oreo preinstalled</span>
 							<span class="spec_table_item">Upgradable to Android 8.1.0 Oreo
-								<small>
-									<a href="#update_notice">
-										<sup>3</sup>
-									</a>
-								</small>
+								<a class="footnote_ref" href="#update_notice">
+									<sup>3</sup>
+								</a>
 							</span>
 						</div>
 					</div>
@@ -287,28 +294,19 @@
 				</div>
 			</div>
 		</section>
-		<footer>
-			<section class="footer_notes">
-				<div class="footer_note" id="carrier_notice">
-					<sup>1</sup>
-					<span>
-						Prices are based off carriers' two year term offerings and on the model with the smallest storage size. Prices may change depending on chosen storage available size, available colours, any ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
-					</span>
-				</div>
-				<div class="footer_note" id="vendor_notice">
-					<sup>2</sup>
-					<span>
-						Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
-					</span>
-				</div>
-				<div class="footer_note" id="update_notice">
-					<sup>3</sup>
-					<span>
-						Updates may be subject to carrier approval and testing before being released. If you purchase this phone through a carrier, check with them to find out when an update will be available for this device.
-					</span>
-				</div>
-			</section>
-		</footer>
+		<section>
+			<ol class="footnotes">
+				<li class="footnote" id="carrier_notice">
+					Prices are based off carriers' two year term offerings. Prices may change depending on available storage capacities, colours, ongoing promotions and are subject to change without notice. Check with your local carrier for the most up to date pricing.
+				</li>
+				<li class="footnote" id="vendor_notice">
+					Vendor pricing is subject to change without notice. Check each vendor for the most up to date pricing.
+				</li>
+				<li class="footnote" id="update_notice">
+					Updates may be subject to carrier approval and testing before being released. If you purchase this phone through a carrier, check with them to find out when an update will be available for this device.
+				</li>
+			</ol>
+		</section>
 	</main>
 </body>
 </html>

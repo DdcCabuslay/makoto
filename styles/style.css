@@ -35,7 +35,7 @@ header section > *:first-child {
 	margin-left: 1rem;
 }
 header section > *:last-child {
-	/*margin-right: 1rem;*/
+	margin-right: 1rem;
 }
 header, button, .button {
 	font-size: 0.875em;	
@@ -99,7 +99,7 @@ footer {
 	position: absolute;
 }
 .stroked_button {
-	border: 1px solid var(--text-dark-translucent);
+	border: 1px solid;
 }
 @media (max-width: 1399px) {
 	main > *:not(.hero) {

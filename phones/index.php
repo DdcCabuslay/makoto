@@ -27,7 +27,7 @@
 		</section>
 		<section>
 			<form class="search_form">
-				<input>
+				<input placeholder="Search Makoto">
 				<button class="search_button">
 					<i class="fas fa-search fa-fw"></i>
 				</button>

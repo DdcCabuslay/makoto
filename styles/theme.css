@@ -5,7 +5,8 @@
 	--accent-gradient-highlight: hsl(213, 100%, 60%);
 	--accent-dark: hsl(203, 100%, 40%);
 	--accent-text: hsl(203, 100%, 90%);
-	--text-dark-translucent: rgba(38, 38, 38, 0.8);
+	--grey: hsl(203, 0%, 20%);
+	--text-dark-translucent: hsla(0, 0%, 15%, 0.8);
 	--shadow: hsla(0, 0%, 0%, 0.2);
 	--shadow-light: hsla(0, 0%, 0%, 0.08);
 }
@@ -13,10 +14,10 @@ html, .subheader {
 	background: hsl(0, 0%, 98%);
 	color: var(--text-dark-translucent);
 }
-header {
-	background-color: var(--text-dark-translucent);
+header, footer {
+	background-color: var(--grey);
 }
-header, header a, .site_nav a, header svg, header input {
+header, header a, .site_nav a, header svg, header input, footer {
 	color: hsl(0, 0%, 80%);	
 }
 header a:hover, .site_nav a:hover, .site_nav a:hover > svg, .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg {
@@ -37,6 +38,9 @@ button, .button, input {
 button:hover, .button:hover {
 	background: var(--shadow-light);
 }
+.stroked_button {
+	border-color: var(--text-dark-translucent);
+}
 .filled_button {
 	background: linear-gradient(var(--accent-main), var(--accent-gradient));
 }
@@ -52,4 +56,10 @@ button:hover, .button:hover {
 .active_colour, .active_storage {
 	background-color: var(--shadow-light);
 	color: var(--accent-main);
+}
+.info_window {
+	border-top: solid 6px var(--accent-gradient);
+}
+.info_window_row_button:hover {
+	color: var(--accent-highlight);
 }
