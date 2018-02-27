@@ -14,6 +14,16 @@
 	<header class="site_header">
 		<section>
 			<a href="." class="header_logo">Makoto</a>
+			<nav class="site_nav">
+				<a href="phones">
+					<i class="fas fa-mobile fa-fw"></i>
+					<span class="nav_title">Phones</span>
+				</a>
+				<a href="laptops">
+					<i class="fas fa-laptop fa-fw"></i>
+					<span class="nav_title">Laptops</span>
+				</a>
+			</nav>
 		</section>
 		<section>
 			<form class="search_form">
@@ -25,14 +35,16 @@
 		</section>
 	</header>
 	<main>
-		<a href="phones" class="hero home_hero phone_hero">
-			<h1>Phones</h1>
-			<img class="phone_hero_img" src="images/phones/home/0.png">
-		</a>
-		<a href="laptops" class="hero home_hero laptop_hero">
-			<h1>Laptops</h1>
-			<img class="laptop_hero_img" src="images/laptops/home/0.png">
-		</a>
+		<div class="hero home_hero">
+			<div class="home_hero_text">
+				<h1>Samsung Galaxy S9</h1>
+				<div class="home_hero_button_row">
+					<a class="button stroked_button" href="http://www.samsung.com/ca/smartphones/galaxy-s9/">Official Website</a>
+					<a href="phones/phone.php" class="button filled_button">More Info</a>
+				</div>
+			</div>
+			<img class="phone_hero_img" src="images/phones/home/s9.png">
+		</div>
 	</main>
 </body>
 </html>
