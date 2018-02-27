@@ -62,8 +62,8 @@
 	display: flex;
 }
 .colour {
-	height: 30px;
-	width: 30px;
+	height: 1.5rem;
+	width: 1.5rem;
 	border-radius: 50%;
 	border: 1px solid #aaa;
 }
@@ -130,6 +130,7 @@
 }
 .spec_table_row {
 	grid-template-columns: 1fr auto;
+	cursor: pointer;
 }
 .spec_table_row:first-child > h4 {
 	margin-top: 0rem;
