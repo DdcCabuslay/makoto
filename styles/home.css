@@ -16,6 +16,8 @@
 	position: relative;
 	height: 90%;
 	margin: auto;
+	opacity: 0;
+	transform: translateY(75px);
 	animation-name: slide_up;
 	animation-delay: 0.25s;
 	animation-duration: 1s;
