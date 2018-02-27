@@ -201,6 +201,14 @@ CREATE TABLE phone_colours(
 	FOREIGN KEY (colour_id) REFERENCES colours(id)
 );
 
+CREATE TABLE phone_highlights(
+	phone_id INT NOT NULL,
+	is_positive BOOLEAN NOT NULL,
+	highlight TEXT NOT NULL,
+	PRIMARY KEY (phone_id, is_positive, highlight),
+	FOREIGN KEY (phone_id) REFERENCES phone(id)
+);
+
 CREATE TABLE phone_pricing(
 	phone_id INT NOT NULL,
 	vendor_id INT NOT NULL,
