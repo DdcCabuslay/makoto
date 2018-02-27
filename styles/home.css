@@ -14,8 +14,12 @@
 .home_hero img {
 	display: block;
 	position: relative;
-	max-height: 500px;
+	height: 90%;
 	margin: auto;
+	animation-name: slide_up;
+	animation-delay: 0.25s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
 }
 .home_hero_text {
 	display: flex;
@@ -24,6 +28,10 @@
 }
 .home_hero_text h1 {
 	color: white;
+}
+@keyframes slide_up {
+	from {opacity: 0; transform: translateY(75px);}
+	to {opacity: 1; transform: translateY(0px);}
 }
 @media screen and (orientation: landscape) {
 	.home_hero {
