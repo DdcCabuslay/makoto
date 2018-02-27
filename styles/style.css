@@ -101,6 +101,9 @@ footer {
 .stroked_button {
 	border: 1px solid;
 }
+.filled_button {
+	padding: calc(0.5rem + 1px);
+}
 @media (max-width: 1399px) {
 	main > *:not(.hero) {
 		margin: 0 1rem;
