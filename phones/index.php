@@ -49,7 +49,8 @@
 					<button>Sort</button>
 				</section>
 			</div>
-			<div class="item_grid">
+			<?php include 'results.php' ?>
+			<!-- <div class="item_grid">
 				<a href="phone.php" class="item">
 					<img class="item_img" src="../images/phones/0/0.png">
 					<div class="item_info">
@@ -82,7 +83,7 @@
 						<span class="item_primary_price">$1035</span>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</section>
 	</main>
 </body>
