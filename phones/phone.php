@@ -34,14 +34,14 @@
 			</form>
 		</section>
 	</header>
-	<header class="subheader">
+<!-- 	<header class="subheader">
 		<section>
 			<h1 class="product_title">Google Pixel 2 XL</h1>
 		</section>
 		<section>
 			<a target="_blank" rel="noopener noreferrer" href="https://store.google.com/product/pixel_2" class="button stroked_button">Official Website</a>
 		</section>
-	</header>
+	</header> -->
 	<main class="opaque">
 		<section class="product_overview">
 			<div class="product_media">
@@ -53,18 +53,31 @@
 			</div>
 			<div class="product_info">
 				<div class="info_window">
-					<h3>Colours</h3>
+					<span>Google</span>
+					<h1 class="product_title">Pixel 2 XL</h1>
+					<div id="product_highlights">
+						<div class="highlights_table">
+							<ul class="positive_highlights">
+								<li>Best in class camera</li>
+								<li>Water resistant</li>
+								<li>Front-firing stereo speakers</li>
+							</ul>
+							<ul class="negative_highlights">
+								<li>No headphone jack</li>
+								<li>pOLED screen has subpar colour reproduction and viewing angles</li>
+							</ul>
+						</div>
+					</div>
 					<div class="info_window_row colour_row">
 						<button class="info_window_row_button colour_button active_colour">
 							<div class="colour" style="background: linear-gradient(#0d0d16, #0d0d16 50%, #323233 51%);"></div>
-							<div class="colour_name">Just Black</div>
+							<!-- <div class="colour_name">Just Black</div> -->
 						</button>
 						<button class="info_window_row_button colour_button">
 							<div class="colour" style="background: linear-gradient(#0d0d16, #0d0d16 50%, #edeff0 51%);"></div>
-							<div class="colour_name">Black &amp; White</div>
+							<!-- <div class="colour_name">Black &amp; White</div> -->
 						</button>
 					</div>
-					<h3>Storage Options</h3>
 					<div class="info_window_row storage_row">
 						<button class="info_window_row_button storage_button active_storage">
 							<div class="storage_size">64 GB</div>
@@ -74,70 +87,14 @@
 						</button>
 					</div>
 					<div class="info_window_footer">
-						<button class="filled_button">Check Pricing</button>
+						<!-- cheapest vendor price -->
+						<button class="filled_button">$1159.00 on Google Store</button>
+						<button class="">Carrier and Vendor Pricing</button>
 					</div>
-					<!-- <h3>
-						Carrier Pricing
-							<a class="footnote_ref" href="#carrier_notice">
-								<sup>1</sup>
-							</a>
-					</h3>
-					<div class="price_listing_row">
-						<span>Freedom Mobile</span>
-						<a target="_blank" rel="noopener noreferrer" href="https://www.freedommobile.ca/plans-and-devices/mobile-devices/device-details/google-pixel-2-xl-(64gb)" class="button stroked_button">$0.00</a>
-					</div>
-					<div class="price_listing_row">
-						<span>Rogers</span>
-						<a target="_blank" rel="noopener noreferrer" href="https://www.rogers.com/web/totes/wireless/#/choose-phone" class="button stroked_button">$449.00</a>
-					</div>
-					<div class="price_listing_row">
-						<span>Bell</span>
-						<a target="_blank" rel="noopener noreferrer" href="https://www.bell.ca/Mobility/Products/Google-Pixel-2-XL" class="button stroked_button">$449.99</a>
-					</div>
-					<div class="price_listing_row">
-						<span>Telus</span>
-						<a target="_blank" rel="noopener noreferrer" href="https://www.telus.com/en/on/mobility/phones/google-pixel-2-xl" class="button stroked_button">$450.00</a>
-					</div>
-					<div class="price_listing_row">
-						<span>Fido</span>
-						<a target="_blank" rel="noopener noreferrer" href="https://www.fido.ca/nac/#/choose-phone" class="button stroked_button">$649.00</a>
-					</div>
-					<div class="price_listing_row">
-						<span>Virgin Mobile</span>
-						<a target="_blank" rel="noopener noreferrer" href="http://www.virginmobile.ca/en/phones/phone-details.html#!/2xlpixel/Black/64/TR18" class="button stroked_button">$649.99</a>
-					</div>
-					<div class="price_listing_row">
-						<span>Koodo Mobile</span>
-						<a target="_blank" rel="noopener noreferrer" href="https://www.koodomobile.com/phones/google-pixel-2-xl" class="button stroked_button">$650.00</a>
-					</div>
-					<h3>
-						Unlocked Vendor Pricing
-							<a class="footnote_ref" href="#vendor_notice">
-								<sup>2</sup>
-							</a>
-					</h3>
-					<div class="price_listing_row">
-						<span>Google Store</span>
-						<a target="_blank" rel="noopener noreferrer" href="https://store.google.com/config/pixel_2" class="button stroked_button">$899.00</a>
-					</div> -->
 				</div>
 			</div>
 		</section>
 		<section class="product_details">
-			<div id="product_release">
-				<h3>Highlights</h3>
-				<div class="highlights_table">
-					<ul class="positive_highlights">
-						<li>Best in class camera</li>
-						<li>Water resistant</li>
-						<li>Front-firing stereo speakers</li>
-					</ul>
-					<ul class="negative_highlights">
-						<li>No headphone jack</li>
-						<li>pOLED screen has subpar colour reproduction and viewing angles</li>
-					</ul>
-				</div>
-			</div>
 			<div id="product_description">
 				<h3>Daniel's Comments</h3>
 				<p>The newest Pixel from Google. The Pixel 2 XL sacrifices the headphone jack from last year for water resistance and dual front-firing speakers, which aren't very common on many flagship phones today. The Pixel 2 XL sports a taller 18:9 screen that flagships have started to adapt, giving you more screen in the same form factor. The camera in the Pixel 2 XL is one of the best among smartphones today, with Google boasting its use of machine learning to help you take the best pictures possible and for portrait photos. There have been some concerns about the screen being poor, but now it seems that they have been improved overall thanks to the mature production time of the phone.</p>

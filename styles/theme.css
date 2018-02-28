@@ -37,7 +37,7 @@ footer {
 	background-color: var(--grey);
 	color: hsl(0, 0%, 80%);	
 }
-.site_header, .info_window {
+.site_header {
 	border-top: 6px solid var(--accent-main);
 }
 .site_header{
@@ -47,23 +47,16 @@ footer {
 	border-color: var(--text-dark-translucent);
 }
 .filled_button {
-	/*background: linear-gradient(var(--accent-main), var(--accent-gradient));*/
-	background: var(--accent-main);
+	background: linear-gradient(var(--accent-main), var(--accent-gradient));
+	/*background: var(--accent-main);*/
 }
 .filled_button:hover {
-	/*background: linear-gradient(var(--accent-highlight), var(--accent-gradient-highlight));*/
-	background: var(--accent-highlight);
+	background: linear-gradient(var(--accent-highlight), var(--accent-gradient-highlight));
+	/*background: var(--accent-highlight);*/
 }
 .filled_button, .filled_button:hover {
 	color: #fff;
 }
-.opaque, .item {
+.opaque, .item, .info_window {
 	background-color: #fff;
-}
-.active_colour, .active_storage {
-	background-color: var(--shadow-light);
-	color: var(--accent-main);
-}
-.info_window_row_button:hover {
-	/*color: var(--accent-highlight);*/
 }
