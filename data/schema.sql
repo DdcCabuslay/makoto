@@ -37,11 +37,19 @@ CREATE TABLE country(
 	name TEXT NOT NULL
 );
 
+CREATE TABLE region(
+	id INT PRIMARY KEY,
+	country_id INT NOT NULL,
+	name TEXT NOT NULL,
+	FOREIGN KEY (country_id) REFERENCES country(id)
+);
+
 CREATE TABLE vendor(
 	id INT PRIMARY KEY,
 	name TEXT NOT NULL,
 	url TEXT NOT NULL,
-	country_id INT NOT NULL,
+	country_id INT, -- null is international
+	region_id INT, -- null is country-wide/international depending on country_id
 	is_carrier BOOLEAN NOT NULL,
 	FOREIGN KEY (country_id) REFERENCES country(id)
 );
@@ -64,7 +72,7 @@ CREATE TABLE colours(
 
 CREATE TABLE display(
 	id INT PRIMARY KEY,
-	name TEXT NOT NULL
+	display_type TEXT NOT NULL
 );
 
 CREATE TABLE autofocus(
@@ -84,22 +92,22 @@ CREATE TABLE camera_flash(
 
 CREATE TABLE fast_charging(
 	id INT PRIMARY KEY,
-	name TEXT NOT NULL
+	fast_charging_name TEXT NOT NULL
 );
 
 CREATE TABLE usb(
 	id INT PRIMARY KEY,
-	name TEXT NOT NULL
+	usb_type TEXT NOT NULL
 );
 
 CREATE TABLE sim(
 	id INT PRIMARY KEY,
-	name TEXT NOT NULL
+	sim_type TEXT NOT NULL
 );
 
 CREATE TABLE glass(
 	id INT PRIMARY KEY,
-	name TEXT NOT NULL
+	glass_type TEXT NOT NULL
 );
 
 CREATE TABLE phone(
@@ -111,9 +119,9 @@ CREATE TABLE phone(
 	os_id INT NOT NULL,
 	upgradable_os_id INT,
 	-- display
-	display_size FLOAT(3) NOT NULL,
-	display_height INT NOT NULL,
-	display_width INT NOT NULL,
+	display_size FLOAT(2) NOT NULL,
+	display_res_height INT NOT NULL,
+	display_res_width INT NOT NULL,
 	display_aspect_ratio TEXT NOT NULL,
 	display_type_id INT NOT NULL,
 	-- camera
@@ -146,7 +154,7 @@ CREATE TABLE phone(
 	battery_size INT NOT NULL,
 	fast_charging_id INT NOT NULL, -- 0 is no fast charging
 	-- wireless
-	wifi_2_4 BOOLEAN NOT NULL,
+	-- wifi_2_4 BOOLEAN NOT NULL,
 	wifi_5 BOOLEAN NOT NULL,
 	bluetooth_version INT NOT NULL,
 	nfc BOOLEAN NOT NULL,
@@ -179,9 +187,10 @@ CREATE TABLE phone(
 
 CREATE TABLE phone_video_resolutions(
 	phone_id INT NOT NULL,
+	is_main_camera BOOLEAN NOT NULL,
 	resolution INT NOT NULL,
 	fps INT NOT NULL,
-	PRIMARY KEY (phone_id, resolution, fps),
+	PRIMARY KEY (phone_id, is_main_camera, resolution, fps),
 	FOREIGN KEY (phone_id) REFERENCES phone(id)
 );
 
@@ -201,6 +210,12 @@ CREATE TABLE phone_colours(
 	FOREIGN KEY (colour_id) REFERENCES colours(id)
 );
 
+CREATE TABLE phone_comments(
+	phone_id INT NOT NULL,
+	comment TEXT NOT NULL,
+	PRIMARY KEY (phone_id, comment)
+);
+
 CREATE TABLE phone_highlights(
 	phone_id INT NOT NULL,
 	is_positive BOOLEAN NOT NULL,
@@ -214,8 +229,8 @@ CREATE TABLE phone_pricing(
 	vendor_id INT NOT NULL,
 	storage INT NOT NULL,
 	colour_id INT NOT NULL,
-	url TEXT NOT NULL,
 	price FLOAT(6) NOT NULL,
+	url TEXT NOT NULL,
 	PRIMARY KEY (phone_id, vendor_id, storage, colour_id, url, price),
 	FOREIGN KEY (phone_id) REFERENCES phone(id),
 	FOREIGN KEY (colour_id) REFERENCES colours(id)
