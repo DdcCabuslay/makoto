@@ -38,8 +38,8 @@
 	padding: 1rem 1rem 0;
 }
 .info_window, .price_listing_row, .info_window_row,
-.product_details > div, .highlights_table, .spec_table_spec, .spec_table_row, 
-.spec_table_subtable {
+.product_details > div, .highlights_table, .spec_table, .spec_table_spec,
+.spec_table_row, .spec_table_subtable {
 	display: grid;
 }
 .info_window h1, .info_window h2, .info_window h3 {
@@ -147,6 +147,7 @@
 }
 .spec_table {
 	margin-bottom: 1rem;
+	grid-gap: 1rem;
 }
 .spec_table_row {
 	grid-template-columns: 1fr auto;
@@ -156,7 +157,7 @@
 	margin-top: 0rem;
 }
 .spec_table_row h4 {
-	margin-top: 1.5rem;
+	margin-top: 0rem;
 	margin-bottom: 0.5rem;
 }
 .spec_table_row svg {
