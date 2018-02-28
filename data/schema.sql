@@ -156,7 +156,7 @@ CREATE TABLE phone(
 	-- wireless
 	-- wifi_2_4 BOOLEAN NOT NULL,
 	wifi_5 BOOLEAN NOT NULL,
-	bluetooth_version INT NOT NULL,
+	bluetooth_version FLOAT(2) NOT NULL,
 	nfc BOOLEAN NOT NULL,
 	-- ports
 	headphone_jack BOOLEAN NOT NULL,
