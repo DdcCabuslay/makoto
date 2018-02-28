@@ -5,7 +5,10 @@
 	--accent-gradient-highlight: hsl(220, 73%, 60%);
 	--accent-dark: hsl(210, 73%, 35%);
 	--accent-text: hsl(210, 73%, 90%);
+	--accent-translucent: hsla(210, 73%, 53%, 0.6);
+	--accent-gradient-translucent: hsla(220, 73%, 53%, 0.6);
 	--grey: hsl(203, 0%, 20%);
+	--white-translucent: hsla(0, 0%, 100%, 0.8);
 	--text-dark-translucent: hsla(0, 0%, 15%, 0.8);
 	--shadow: hsla(0, 0%, 0%, 0.2);
 	--shadow-light: hsla(0, 0%, 0%, 0.08);
@@ -15,7 +18,8 @@ html, .subheader {
 	color: var(--text-dark-translucent);
 }
 header a:hover, .site_nav a:hover, .site_nav a:hover > svg,
-.site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg {
+.site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg,
+.item_primary_price {
 	color: var(--accent-main);
 }
 header input {
@@ -36,9 +40,6 @@ button:hover, .button:hover {
 footer {
 	background-color: var(--grey);
 	color: hsl(0, 0%, 80%);	
-}
-.site_header {
-	border-top: 6px solid var(--accent-main);
 }
 .site_header{
 	border-bottom: 1px solid var(--shadow);

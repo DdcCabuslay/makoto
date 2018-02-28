@@ -11,29 +11,7 @@
 	<title>Google Pixel 2 XL - Makoto</title>
 </head>
 <body>
-	<header class="site_header">
-		<section>
-			<a href="../" class="header_logo">Makoto</a>
-			<nav class="site_nav">
-				<a class="nav_selected" href=".">
-					<i class="fas fa-mobile fa-fw"></i>
-					<span class="nav_title">Phones</span>
-				</a>
-				<a href="../laptops">
-					<i class="fas fa-laptop fa-fw"></i>
-					<span class="nav_title">Laptops</span>
-				</a>
-			</nav>
-		</section>
-		<section>
-			<form class="search_form">
-				<input placeholder="Search Makoto">
-				<button class="search_button">
-					<i class="fas fa-search fa-fw"></i>
-				</button>
-			</form>
-		</section>
-	</header>
+	<?php include 'header.php' ?>
 <!-- 	<header class="subheader">
 		<section>
 			<h1 class="product_title">Google Pixel 2 XL</h1>
@@ -53,7 +31,7 @@
 			</div>
 			<div class="product_info">
 				<div class="info_window">
-					<span>Google</span>
+					<span class="product_oem">Google</span>
 					<h1 class="product_title">Pixel 2 XL</h1>
 					<div id="product_highlights">
 						<div class="highlights_table">

@@ -9,7 +9,7 @@ main > *:not(.hero) {
 	margin: auto;
 }
 header {
-	height: 56px;
+	height: 64px;
 }
 header, header section {
 	display: flex;
