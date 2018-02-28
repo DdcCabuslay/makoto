@@ -45,6 +45,12 @@
 			</div>
 			<img class="phone_hero_img" src="images/phones/home/s9.png">
 		</div>
+		<section id="new">
+			<!-- <?php include 'phones/results.php' ?> -->
+		</section>
+		<section id="top">
+			<!-- <?php include 'phones/results.php' ?> -->
+		</section>
 	</main>
 </body>
 </html>

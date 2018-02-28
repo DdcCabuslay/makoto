@@ -1,10 +1,10 @@
 :root {
-	--accent-main: hsl(203, 100%, 50%);
-	--accent-gradient: hsl(213, 100%, 50%);
-	--accent-highlight: hsl(203, 100%, 60%);
-	--accent-gradient-highlight: hsl(213, 100%, 60%);
-	--accent-dark: hsl(203, 100%, 40%);
-	--accent-text: hsl(203, 100%, 90%);
+	--accent-main: hsl(210, 73%, 53%);
+	--accent-gradient: hsl(220, 73%, 53%);
+	--accent-highlight: hsl(210, 73%, 60%);
+	--accent-gradient-highlight: hsl(220, 73%, 60%);
+	--accent-dark: hsl(210, 73%, 35%);
+	--accent-text: hsl(210, 73%, 90%);
 	--grey: hsl(203, 0%, 20%);
 	--text-dark-translucent: hsla(0, 0%, 15%, 0.8);
 	--shadow: hsla(0, 0%, 0%, 0.2);
@@ -14,14 +14,9 @@ html, .subheader {
 	background: hsl(0, 0%, 98%);
 	color: var(--text-dark-translucent);
 }
-header, footer {
-	background-color: var(--grey);
-}
-header, header a, .site_nav a, header svg, header input, footer {
-	color: hsl(0, 0%, 80%);	
-}
-header a:hover, .site_nav a:hover, .site_nav a:hover > svg, .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg {
-	color: #fff;
+header a:hover, .site_nav a:hover, .site_nav a:hover > svg,
+.site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg {
+	color: var(--accent-main);
 }
 header input {
 	border-color: hsl(0, 0%, 80%);
@@ -38,14 +33,26 @@ button, .button, input {
 button:hover, .button:hover {
 	background: var(--shadow-light);
 }
+footer {
+	background-color: var(--grey);
+	color: hsl(0, 0%, 80%);	
+}
+.site_header, .info_window {
+	border-top: 6px solid var(--accent-main);
+}
+.site_header{
+	border-bottom: 1px solid var(--shadow);
+}
 .stroked_button {
 	border-color: var(--text-dark-translucent);
 }
 .filled_button {
-	background: linear-gradient(var(--accent-main), var(--accent-gradient));
+	/*background: linear-gradient(var(--accent-main), var(--accent-gradient));*/
+	background: var(--accent-main);
 }
 .filled_button:hover {
-	background: linear-gradient(var(--accent-highlight), var(--accent-gradient-highlight));
+	/*background: linear-gradient(var(--accent-highlight), var(--accent-gradient-highlight));*/
+	background: var(--accent-highlight);
 }
 .filled_button, .filled_button:hover {
 	color: #fff;
@@ -57,9 +64,6 @@ button:hover, .button:hover {
 	background-color: var(--shadow-light);
 	color: var(--accent-main);
 }
-.info_window {
-	border-top: solid 6px var(--accent-gradient);
-}
 .info_window_row_button:hover {
-	color: var(--accent-highlight);
+	/*color: var(--accent-highlight);*/
 }
