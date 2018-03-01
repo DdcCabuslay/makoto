@@ -108,12 +108,13 @@
 .info_window_footer {
 	margin: 0.5rem 0;
 }
-.info_window_footer button {
+.info_window_footer button, .info_window_footer .button {
 	display: block;
 	width: 100%;
 	padding: 1rem 0;
 	margin: 0.5rem 0;
 	text-transform: none;
+	text-align: center;
 }
 .price_listing_row {
 	grid-template-columns: 1fr auto;
