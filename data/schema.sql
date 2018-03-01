@@ -28,7 +28,7 @@ CREATE TABLE processor(
 	cores INT NOT NULL,
 	main_clock FLOAT(3) NOT NULL,
 	secondary_clock FLOAT(3),
-	gpu TEXT NOT NULL,
+	gpu TEXT,
 	FOREIGN KEY (oem_id) REFERENCES processor_oem(id)
 );
 
@@ -85,9 +85,9 @@ CREATE TABLE stabilization(
 	stabilization_type TEXT NOT NULL
 );
 
-CREATE TABLE camera_flash(
+CREATE TABLE dual_camera(
 	id INT PRIMARY KEY, 
-	flash_type TEXT NOT NULL
+	dual_camera_type TEXT NOT NULL
 );
 
 CREATE TABLE fast_charging(
@@ -126,18 +126,18 @@ CREATE TABLE phone(
 	display_type_id INT NOT NULL,
 	-- camera
 	main_camera_res FLOAT(3) NOT NULL,
-	main_camera_pixel_size FLOAT(3) NOT NULL,
+	main_camera_pixel_size FLOAT(3),
 	main_camera_autofocus_id INT NOT NULL, -- 0 is no/fixed autofocus
 	main_camera_stabilization_id INT NOT NULL, -- 0 is no stabilization
 	main_camera_aperture FLOAT(2) NOT NULL,
-	main_camera_flash_id INT NOT NULL,
 	dual_camera_res FLOAT(3),
 	dual_camera_pixel_size FLOAT(3),
 	dual_camera_autofocus_id INT, -- 0 is no/fixed autofocus
 	dual_camera_stabilization_id INT, -- 0 is no stabilization
 	dual_camera_aperture FLOAT(2),
+	dual_camera_type_id INT,
 	front_camera_res FLOAT(3) NOT NULL,
-	front_camera_pixel_size FLOAT(3) NOT NULL,
+	front_camera_pixel_size FLOAT(3),
 	front_camera_autofocus_id INT NOT NULL, -- 0 is no/fixed autofocus
 	front_camera_stabilization_id INT NOT NULL, -- 0 is no stabilization
 	front_camera_aperture FLOAT(2) NOT NULL,
@@ -152,9 +152,8 @@ CREATE TABLE phone(
 	device_weight FLOAT(4) NOT NULL,
 	-- battery 
 	battery_size INT NOT NULL,
-	fast_charging_id INT NOT NULL, -- 0 is no fast charging
+	fast_charging_id INT, -- NULL is no fast charging
 	-- wireless
-	-- wifi_2_4 BOOLEAN NOT NULL,
 	wifi_5 BOOLEAN NOT NULL,
 	bluetooth_version FLOAT(2) NOT NULL,
 	nfc BOOLEAN NOT NULL,
@@ -166,7 +165,7 @@ CREATE TABLE phone(
 	glass_id INT,
 	water_resistance INT,
 	-- misc
-	url TEXT NOT NULL,
+	comment TEXT NOT NULL,
 	FOREIGN KEY (oem_id) REFERENCES oem(id),
 	FOREIGN KEY (os_id) REFERENCES os(id),
 	FOREIGN KEY (upgradable_os_id) REFERENCES os(id),
@@ -174,9 +173,9 @@ CREATE TABLE phone(
 	FOREIGN KEY (main_camera_stabilization_id) REFERENCES stabilization(id),
 	FOREIGN KEY (main_camera_autofocus_id) REFERENCES autofocus(id),
 	FOREIGN KEY (main_camera_stabilization_id) REFERENCES stabilization(id),
-	FOREIGN KEY (main_camera_flash_id) REFERENCES camera_flash(id),
 	FOREIGN KEY (dual_camera_autofocus_id) REFERENCES autofocus(id),
 	FOREIGN KEY (dual_camera_stabilization_id) REFERENCES stabilization(id),
+	FOREIGN KEY (dual_camera_type_id) REFERENCES dual_camera(id),
 	FOREIGN KEY (front_camera_autofocus_id) REFERENCES autofocus(id),
 	FOREIGN KEY (front_camera_stabilization_id) REFERENCES stabilization(id),
 	FOREIGN KEY (fast_charging_id) REFERENCES fast_charging(id),
@@ -208,12 +207,6 @@ CREATE TABLE phone_colours(
 	PRIMARY KEY (phone_id, colour_id),
 	FOREIGN KEY (phone_id) REFERENCES phone(id),
 	FOREIGN KEY (colour_id) REFERENCES colours(id)
-);
-
-CREATE TABLE phone_comments(
-	phone_id INT NOT NULL,
-	comment TEXT NOT NULL,
-	PRIMARY KEY (phone_id, comment)
 );
 
 CREATE TABLE phone_highlights(
