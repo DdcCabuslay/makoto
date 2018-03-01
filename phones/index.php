@@ -15,7 +15,7 @@
 	<main>
 		<section class="hero">
 			<h1>Phones</h1>
-			<img class="hero_img_lower_right" src="../images/phones/home/0.png">
+			<img src="../images/phones/home/pixels.png">
 		</section>
 		<section id="phones">
 			<div class="item_grid_header">

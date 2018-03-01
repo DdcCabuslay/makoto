@@ -1,8 +1,6 @@
 .hero {
-	background-color: hsl(207, 50%, 90%);
+	background-color: #fff;
 }
 .hero img {
-	width: 50%;
-	left: 25%;	
-	top: 100px;
+	position: relative;
 }
