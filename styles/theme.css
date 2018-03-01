@@ -63,3 +63,8 @@ footer {
 .opaque, .item {
 	background-color: #fff;
 }
+@media (max-width: 767px) {
+	.info_window {
+		background: #fff;
+	}
+}
