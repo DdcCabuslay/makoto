@@ -16,7 +16,7 @@
 <div class="item_grid">
 	<?php foreach ($results_array as $result): ?>
 	<a href="phone.php?id=<?=$result['id']?>" class="item">
-		<img class="item_img" src="../images/phones/0/0.png">
+		<img class="item_img" src="../images/phones/<?=$result['id']?>/thumb.jpg">
 		<div class="item_info">
 			<div class="item_name">
 				<?=$result['model']?>
