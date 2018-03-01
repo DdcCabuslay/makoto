@@ -13,13 +13,15 @@
 	--shadow: hsla(0, 0%, 0%, 0.2);
 	--shadow-light: hsla(0, 0%, 0%, 0.08);
 }
-html, .subheader {
+html, .subheader, .info_window {
 	background: hsl(0, 0%, 98%);
+}
+html {
 	color: var(--text-dark-translucent);
 }
 header a:hover, .site_nav a:hover, .site_nav a:hover > svg,
 .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg,
-.item_primary_price {
+.item_primary_price, .product_oem {
 	color: var(--accent-main);
 }
 header input {
@@ -58,6 +60,6 @@ footer {
 .filled_button, .filled_button:hover {
 	color: #fff;
 }
-.opaque, .item, .info_window {
+.opaque, .item {
 	background-color: #fff;
 }
