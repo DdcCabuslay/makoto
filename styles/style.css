@@ -194,6 +194,7 @@ footer {
 	}
 	.dialog_body {
 		grid-template-columns: repeat(2, 1fr);
+		max-height: 60vh;
 	}
 }
 @media (max-width: 480px) {
