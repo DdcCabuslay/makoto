@@ -9,11 +9,12 @@
 	--accent-gradient-translucent: hsla(220, 73%, 53%, 0.6);
 	--grey: hsl(203, 0%, 20%);
 	--white-translucent: hsla(0, 0%, 100%, 0.8);
+	--light-grey-translucent: hsla(0, 0%, 95%, 0.8);
 	--text-dark-translucent: hsla(0, 0%, 15%, 0.8);
 	--shadow: hsla(0, 0%, 0%, 0.2);
 	--shadow-light: hsla(0, 0%, 0%, 0.08);
 }
-html, .subheader, .info_window {
+html, .subheader, .info_window, .dialog {
 	background: hsl(0, 0%, 98%);
 }
 html {
@@ -34,16 +35,22 @@ a, button, .button, button:hover, .button:hover, .hero h1 {
 	color: var(--text-dark-translucent);
 }
 button, .button, input {
-	background: transparent;
+	background-color: transparent;
 }
 button:hover, .button:hover {
-	background: var(--shadow-light);
+	background-color: var(--shadow-light);
 }
 footer {
 	background-color: var(--grey);
 	color: hsl(0, 0%, 80%);	
 }
-.site_header{
+.dialog_area {
+	background: var(--white-translucent);	
+}
+.dialog_footer {
+	background-color: var(--light-grey-translucent);
+}
+.site_header {
 	border-bottom: 1px solid var(--shadow);
 }
 .stroked_button {

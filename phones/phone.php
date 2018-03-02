@@ -101,6 +101,7 @@
 	</style>
 </head>
 <body>
+	<?php include 'price_dialog.php' ?>
 	<?php include 'header.php' ?>
 <!-- 	<header class="subheader">
 		<section>
@@ -167,8 +168,8 @@
 					</div>
 					<div class="info_window_footer">
 						<!-- cheapest vendor price -->
-						<a target="_blank" rel="noopener noreferrer" href="" class="button filled_button">$1159.00 on Google Store</a>
-						<button>Carrier and Vendor Pricing</button>
+						<a target="_blank" rel="noopener noreferrer" href="<?= $cheapestVendorPrice['url'] ?>" class="button filled_button">$<?= $cheapestVendorPrice['price'] ?> on <?= $cheapestVendorPrice['name'] ?></a>
+						<button id="pricing_button">Carrier and Vendor Pricing</button>
 					</div>
 				</div>
 			</div>
@@ -447,4 +448,26 @@
 		</section>
 	</main>
 </body>
+<script>
+	var doc = document.documentElement;
+	var dialogArea = document.getElementsByClassName("dialog_area");
+	var pricingButton = document.getElementById("pricing_button");
+	var pricingDialog = document.getElementById("pricing_dialog");
+	var pricingDialogCloseButton = document.getElementById("close_pricing_dialog");
+
+	pricingButton.addEventListener('click', function() {
+		dialogArea[0].style.top = window.scrollY + "px";
+		pricingDialog.classList.add("dialog_area_open");
+		doc.classList.add("no_scroll");
+	});
+	
+	pricingDialogCloseButton.addEventListener('click', function() {
+		pricingDialog.classList.add("dialog_area_close");
+		doc.classList.remove("no_scroll");
+		setTimeout(function() {
+			pricingDialog.classList.remove("dialog_area_close");
+			pricingDialog.classList.remove("dialog_area_open");
+		}, 250);
+	})
+</script>
 </html>

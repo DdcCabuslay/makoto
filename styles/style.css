@@ -53,7 +53,7 @@ button, .button {
 	border-radius: 4px;
 	cursor: pointer;
 	text-transform: capitalize;
-	transition: background 0.2s;
+	transition: background-color 0.2s;
 }
 input {
 	border: none;
@@ -62,6 +62,78 @@ input {
 }
 footer {
 	margin-bottom: 0;
+}
+.no_scroll {
+	overflow: hidden;
+}
+.dialog_area {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	display: none;
+	top: 0;
+	opacity: 0;
+}
+.dialog_area_open {
+	animation-name: dialog_area_visible;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	display: flex;
+}
+.dialog_area_open > .dialog {
+	animation-name: dialog_slide_down;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+}
+.dialog_area_close {
+	animation-name: dialog_area_invisible;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+}
+.dialog_area_close > .dialog {
+	animation-name: dialog_slide_up;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+}
+.dialog {
+	margin: auto;
+	width: 750px;
+	box-shadow: 0px 12px 24px var(--shadow);
+	opacity: 0;
+	transform: translateY(-100px);
+}
+.dialog_header h2 {
+	margin-bottom: 0;
+}
+.dialog > section:not(.dialog_footer) {
+	padding: 0 1rem;
+}
+.dialog_body {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+	overflow: auto;
+	max-height: 70vh;
+}
+.dialog_body > h3 {
+	grid-column: 1 / -1;
+}
+.dialog_cell {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.price_button {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+	height: 50px;
+	border: 1px solid var(--shadow);
+}
+.dialog_footer {
+	padding: 0.5rem 1rem;
+	text-align: right;
+	margin-top: 1rem;
 }
 .site_header {
 	font-weight: 600;
@@ -115,7 +187,14 @@ footer {
 @media (max-width: 767px) {
 	.nav_title {
 		display: none;
-	}	
+	}
+	.dialog {
+		margin: auto 1rem;
+		width: 100%;
+	}
+	.dialog_body {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 @media (max-width: 480px) {
 	.site_nav svg {
@@ -128,4 +207,20 @@ footer {
 	.hero {
 		height: 250px;
 	}
+}
+@keyframes dialog_slide_down {
+	from {opacity: 0; transform: translateY(-100px);}
+	to {opacity: 1; transform: translateY(0px);}
+}
+@keyframes dialog_slide_up {
+	from {opacity: 1; transform: translateY(0px);}
+	to {opacity: 0; transform: translateY(-100px);}
+}
+@keyframes dialog_area_visible {
+	from {opacity: 0;}
+	to {opacity: 1;}	
+}
+@keyframes dialog_area_invisible {
+	from {opacity: 1;}	
+	to {opacity: 0;}
 }
