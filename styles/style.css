@@ -208,6 +208,9 @@ footer {
 	.hero {
 		height: 250px;
 	}
+	.price_button {
+		background-size: auto 25px;
+	}
 }
 @keyframes dialog_slide_down {
 	from {opacity: 0; transform: translateY(-100px);}

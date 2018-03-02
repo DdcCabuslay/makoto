@@ -10,6 +10,7 @@
 .product_media {
 	display: grid;
 	grid-template-rows: 1fr 75px;
+	transition: opacity 0.1s;
 }
 .product_info {
 	display: flex;
@@ -20,6 +21,7 @@
 	width: 100%;
 	object-fit: contain;
 	margin: auto;
+	transition: opacity 0.1s;
 }
 .image_thumbs {
 	text-align: center;
@@ -59,6 +61,7 @@
 .info_window_row_button {
 	text-align: center;
 	border: 1px solid transparent;
+	transition: border 0.2s;
 }
 #product_highlights {
 	margin-bottom: 0.5rem;
@@ -83,13 +86,13 @@
 	content: "\2212";
     color: var(--text-dark-translucent);
 }
-.active_colour, .active_storage {
+.info_window_row_button_active {
 	border: 1px solid var(--shadow);
 	color: var(--accent-main);
 }
 .colour_row {
 	grid-template-columns: repeat(7, calc(2.5rem + 4px));
-	margin-bottom: 0.25rem;
+	margin-bottom: 0.5rem;
 }
 .colour_button {
 	cursor: pointer;
@@ -103,11 +106,6 @@
 	border: 1px solid #aaa;
 	margin: auto;
 }
-/*.colour_name {
-	position: absolute;
-	align-self: center;
-	margin-left: 0.5rem;
-}*/
 .storage_row {
 	grid-template-columns: repeat(4, 5rem);
 }
@@ -171,6 +169,39 @@
 	align-self: end;
 	margin-bottom: 0.5rem;
 	cursor: pointer;
+	transition: transform 0.25s;
+}
+.spec_table_row_open > .spec_table_spec_overview {
+	/*animation-name: collapse_row;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+	display: none;*/
+	opacity: 0;
+}
+.spec_table_row_open > .spec_table_spec {
+	animation-name: expand_row;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+	display: grid;
+}
+.spec_table_row_open svg {
+	transform: rotate(180deg);
+}
+.spec_table_row_close > .spec_table_spec_overview {
+	/*animation-name: expand_row;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+	display: block;*/
+	opacity: 1;
+}
+.spec_table_row_close > .spec_table_spec {
+	animation-name: collapse_row;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	/*display: none;*/
+}
+.spec_table_row_close svg {
+	transform: rotate(0deg);
 }
 .spec_table_subtable {
 	grid-gap: 1rem;
@@ -181,9 +212,12 @@
 }
 .spec_table_spec_overview {
 	grid-column: 1 / -1;
+	transition: opacity 0.1s;
 }
 .spec_table_spec {
 	display: none;
+	max-height: 0;
+	margin-top: -1rem;
 }
 .footnote_ref {
 	font-size: 0.875em;
@@ -220,9 +254,6 @@
 	.highlights_table ul {
 	    margin-bottom: 0.5rem;
 	}
-	.info_window_row {
-		margin: 0;
-	}
 	.price_listing_row > * {
 		margin: 0.25rem 0;
 	}
@@ -230,4 +261,12 @@
 		grid-template-columns: 1fr;
 		grid-gap: 0;
 	}
+}
+@keyframes expand_row {
+	from {opacity: 0; max-height: 0px}
+	to {opacity: 1; max-height: 600px}
+}
+@keyframes collapse_row {
+	from {opacity: 1; max-height: 600px}
+	to {opacity: 0; max-height: 0px}
 }

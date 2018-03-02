@@ -90,18 +90,11 @@
 	<link rel="stylesheet" type="text/css" href="../styles/phones.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Google Pixel 2 XL - Makoto</title>
-	<!-- temporary until JS implementation -->
-	<style type="text/css">
-		.spec_table_row:hover > .spec_table_spec_overview {
-			display: none;
-		}
-		.spec_table_row:hover > .spec_table_spec {
-			display: grid;
-		}
-	</style>
 </head>
 <body>
-	<?php include 'price_dialog.php' ?>
+	<aside id="pricing_dialog" class="dialog_area">
+		<?php include 'price_dialog.php' ?>
+	</aside>
 	<?php include 'header.php' ?>
 <!-- 	<header class="subheader">
 		<section>
@@ -140,36 +133,30 @@
 					</div>
 					<div class="info_window_row colour_row">
 						<?php foreach($colourArray as $colour): ?>
-						<?php if(!is_null($colour['secondary_colour_hex'])): ?>
-						<button class="info_window_row_button colour_button">
+						<button class="info_window_row_button colour_button" data-colour-id="<?=$colour['colour_id']?>">
+							<?php if(!is_null($colour['secondary_colour_hex'])): ?>
 							<div class="colour" style="background: linear-gradient(#<?=$colour['colour_hex']?>, #<?=$colour['colour_hex']?> 50%, #<?=$colour['secondary_colour_hex']?> 51%);"></div>
+							<?php else: ?>
+							<div class="colour" style="background: #<?= $colour['colour_hex'] ?>;"></div>
+							<?php endif; ?>
 						</button>
-						<?php else: ?>
-						<button class="info_window_row_button colour_button">
-							<div class="colour" style="<?= htmlspecialchars('background: #' . $colour['colour_hex'] . ';'); ?>"></div>
-						</button>
-						<?php endif; ?>
 						<?php endforeach; ?>
 					</div>
 					<div class="info_window_row storage_row">
-						<?php if($ramCount['count'] == '1'): ?>
 						<?php foreach($storageArray as $storage): ?>
-						<button class="info_window_row_button storage_button">
+						<button class="info_window_row_button storage_button" data-storage="<?= $storage['storage'] ?>">
+							<?php if($ramCount['count'] == '1'): ?>
 							<div class="storage_size"><?= $storage['storage'] ?> GB</div>
+							<?php else: ?>
+							<div class="storage_size"><?= $storage['storage'] ?> GB/<?= $storage['ram'] ?> GB</div>
+							<?php endif; ?>
 						</button>
 						<?php endforeach; ?>
-						<?php else: ?>
-						<?php foreach($storageArray as $storage): ?>
-						<button class="info_window_row_button storage_button">
-							<div class="storage_size"><?= $storage['storage'] ?> GB/<?= $storage['ram'] ?> GB</div>
-						</button>							
-						<?php endforeach; ?>
-						<?php endif; ?>
 					</div>
 					<div class="info_window_footer">
 						<!-- cheapest vendor price -->
-						<a target="_blank" rel="noopener noreferrer" href="<?= $cheapestVendorPrice['url'] ?>" class="button filled_button">$<?= $cheapestVendorPrice['price'] ?> on <?= $cheapestVendorPrice['name'] ?></a>
-						<button id="pricing_button">Carrier and Vendor Pricing</button>
+						<!-- <a target="_blank" rel="noopener noreferrer" href="<?= $cheapestVendorPrice['url'] ?>" class="button filled_button">$<?= $cheapestVendorPrice['price'] ?> on <?= $cheapestVendorPrice['name'] ?></a> -->
+						<button id="pricing_button" class="filled_button">Carrier and Vendor Pricing</button>
 					</div>
 				</div>
 			</div>
@@ -448,5 +435,6 @@
 		</section>
 	</main>
 </body>
+<script src="../scripts/phone.js"></script>
 <script src="../scripts/price_dialog.js"></script>
 </html>
