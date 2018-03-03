@@ -8,8 +8,6 @@
 .home_hero_grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 0.5rem;
-	margin: 0.5rem;
 }
 .home_hero {
 	display: grid;
@@ -18,7 +16,6 @@
 }
 .home_hero img {
 	align-self: end;
-	margin-right: 0.5rem;
 	height: 100%;
 }
 .home_hero_info {
@@ -42,9 +39,11 @@
 @media (max-width: 767px) {
 	.home_hero_grid {
 		grid-template-columns: 1fr;
+		grid-gap: 0.5rem;
 	}
 	.home_hero {
 		grid-template-columns: 1fr;
+		grid-gap: 1.5rem;
 		height: initial;
 	}
 	.home_hero img {
