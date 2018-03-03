@@ -6,10 +6,10 @@
 				<i class="fas fa-mobile fa-fw"></i>
 				<span class="nav_title">Phones</span>
 			</a>
-			<a href="laptops">
+			<!-- <a href="laptops">
 				<i class="fas fa-laptop fa-fw"></i>
 				<span class="nav_title">Laptops</span>
-			</a>
+			</a> -->
 		</nav>
 	</section>
 	<section>
