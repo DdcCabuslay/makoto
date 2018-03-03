@@ -9,7 +9,7 @@ main > *:not(.hero) {
 	margin: auto;
 }
 header {
-	height: 64px;
+	height: 56px;
 }
 header, header section {
 	display: flex;
@@ -57,7 +57,6 @@ button, .button {
 }
 input {
 	border: none;
-	border-bottom: 1px solid;
 	padding: 4px;
 }
 footer {
@@ -101,6 +100,7 @@ footer {
 	box-shadow: 0px 12px 24px var(--shadow);
 	opacity: 0;
 	transform: translateY(-100px);
+	border-radius: 4px;
 }
 .dialog_header h2 {
 	margin-bottom: 0;

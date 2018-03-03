@@ -13,8 +13,8 @@ function createDialogHandlers() {
 
 	pricingDialogCloseButton.addEventListener('click', function() {
 		pricingDialog.classList.add("dialog_area_close");
-		doc.classList.remove("no_scroll");
 		setTimeout(function() {
+			doc.classList.remove("no_scroll");
 			pricingDialog.classList.remove("dialog_area_close");
 			pricingDialog.classList.remove("dialog_area_open");
 		}, 250);

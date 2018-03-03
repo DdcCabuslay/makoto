@@ -91,7 +91,7 @@
 	color: var(--accent-main);
 }
 .colour_row {
-	grid-template-columns: repeat(7, calc(2.5rem + 4px));
+	grid-template-columns: repeat(5, calc(2.5rem + 4px));
 	margin-bottom: 0.5rem;
 }
 .colour_button {
@@ -107,7 +107,7 @@
 	margin: auto;
 }
 .storage_row {
-	grid-template-columns: repeat(4, 5rem);
+	grid-template-columns: repeat(3, auto);
 }
 .info_window_footer {
 	margin: 0.5rem 0;

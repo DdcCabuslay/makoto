@@ -6,9 +6,9 @@
 	$connectString = "dbname=ddccabuslay user=" . $_SERVER['DB_USER'];
 	$connection = pg_connect($connectString) or die('Could not connect: ' . pg_last_error());
 	$phoneDbQuery = 
-	"select phone.id, oem.name as oem_name, phone.model, os1.name as os_name, os2.name as upgradable_os_name, display_size, display_res_height, display_res_width, display_aspect_ratio, display.display_type, main_camera_res, main_camera_pixel_size, af1.autofocus_type as main_autofocus_type, st1.stabilization_type as main_stabilization_type, main_camera_aperture, dual_camera_res, dual_camera_pixel_size, af2.autofocus_type as dual_autofocus_type, st2.stabilization_type as dual_stabilization_type, dual_camera_aperture, dual_camera_type, front_camera_res, front_camera_pixel_size, af3.autofocus_type as front_autofocus_type, st3.stabilization_type as front_stabilization_type, front_camera_aperture, processor_oem.name || ' ' || processor.model as processor_model, cores, main_clock, secondary_clock, gpu, expandable_storage, device_length, device_width, device_height, device_weight, battery_size, fast_charging_name, wireless_charging_standard, wifi_5, bluetooth_version, nfc, headphone_jack, usb_type, sim_type, glass_type, water_resistance, comment 
-		from makoto.phone, makoto.oem, makoto.os as os1, makoto.os as os2, makoto.display, makoto.autofocus as af1, makoto.autofocus as af2, makoto.autofocus as af3, makoto.stabilization as st1, makoto.stabilization as st2, makoto.stabilization as st3, makoto.dual_camera, makoto.processor, makoto.processor_oem, makoto.fast_charging, makoto.wireless_charging, makoto.usb, makoto.sim, makoto.glass
-		where phone.id = $1 and oem.id = phone.oem_id and os_id = os1.id and (upgradable_os_id = os2.id or upgradable_os_id is null) and display.id = display_type_id and af1.id = main_camera_autofocus_id and (af2.id = dual_camera_autofocus_id or dual_camera_autofocus_id is null) and af3.id = front_camera_autofocus_id and st1.id = main_camera_stabilization_id and (st2.id = dual_camera_stabilization_id or dual_camera_stabilization_id is null) and st3.id = front_camera_stabilization_id and (dual_camera.id = dual_camera_type_id or dual_camera_type_id is null) and processor_id = processor.id and processor.oem_id = processor_oem.id and (fast_charging_id = fast_charging.id or fast_charging_id is null) and (wireless_charging_id = wireless_charging.id or wireless_charging_id is null) and usb_id = usb.id and sim_id = sim.id and glass_id = glass.id";
+	"select phone.id, oem.name as oem_name, phone.model, os1.name as os_name, upgradable_os_id, os2.name as upgradable_os_name, display_size, display_res_height, display_res_width, display_aspect_ratio, display.display_type, main_camera_res, main_camera_pixel_size, af1.autofocus_type as main_autofocus_type, st1.stabilization_type as main_stabilization_type, main_camera_aperture, dual_camera_res, dual_camera_pixel_size, st2.stabilization_type as dual_stabilization_type, dual_camera_aperture, dual_camera_type, front_camera_res, front_camera_pixel_size, af2.autofocus_type as front_autofocus_type, st3.stabilization_type as front_stabilization_type, front_camera_aperture, processor_oem.name || ' ' || processor.model as processor_model, cores, main_clock, secondary_clock, gpu, expandable_storage, device_length, device_width, device_height, device_weight, battery_size, fast_charging_name, wireless_charging_id, wireless_charging_standard, wifi_5, bluetooth_version, nfc, headphone_jack, usb_type, sim_type, glass_type, water_resistance, comment 
+		from makoto.phone, makoto.oem, makoto.os as os1, makoto.os as os2, makoto.display, makoto.autofocus as af1, makoto.autofocus as af2, makoto.stabilization as st1, makoto.stabilization as st2, makoto.stabilization as st3, makoto.dual_camera, makoto.processor, makoto.processor_oem, makoto.fast_charging, makoto.wireless_charging, makoto.usb, makoto.sim, makoto.glass
+		where phone.id = $1 and oem.id = phone.oem_id and os_id = os1.id and (upgradable_os_id = os2.id or upgradable_os_id is null) and display.id = display_type_id and af1.id = main_camera_autofocus_id and af2.id = front_camera_autofocus_id and st1.id = main_camera_stabilization_id and (st2.id = dual_camera_stabilization_id or dual_camera_stabilization_id is null) and st3.id = front_camera_stabilization_id and (dual_camera.id = dual_camera_type_id or dual_camera_type_id is null) and processor_id = processor.id and processor.oem_id = processor_oem.id and (fast_charging_id = fast_charging.id or fast_charging_id is null) and (wireless_charging_id = wireless_charging.id or wireless_charging_id is null) and usb_id = usb.id and sim_id = sim.id and glass_id = glass.id";
 	$phoneResults = pg_query_params($connection, $phoneDbQuery, array($id));
 	$phoneInfo = pg_fetch_array($phoneResults);
 
@@ -89,7 +89,7 @@
 	<link rel="stylesheet" type="text/css" href="../styles/product.css">
 	<link rel="stylesheet" type="text/css" href="../styles/phones.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Google Pixel 2 XL - Makoto</title>
+	<title><?= $phoneInfo['model'] ?> - Makoto</title>
 </head>
 <body>
 	<aside id="pricing_dialog" class="dialog_area">
@@ -177,7 +177,7 @@
 						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item"><?=$phoneInfo['os_name']?> preinstalled</span>
-							<?php if(!is_null($phoneInfo['upgradable_os_name'])): ?>
+							<?php if(!is_null($phoneInfo['upgradable_os_id'])): ?>
 							<span class="spec_table_item">Upgradable to <?=$phoneInfo['upgradable_os_name']?>
 								<sup>3</sup>
 							</span>
@@ -220,7 +220,7 @@
 								</span>
 								<?php endif; ?>
 								<span class="spec_table_item">
-									<?=$phoneInfo['main_autofocus_type']?> (Main); <?=$phoneInfo['dual_autofocus_type']?> (<?=$phoneInfo['dual_camera_type']?>)
+									<?=$phoneInfo['main_autofocus_type']?>
 								</span>
 								<span class="spec_table_item">
 									<?=$phoneInfo['main_stabilization_type']?> (Main); <?=$phoneInfo['dual_stabilization_type']?> (<?=$phoneInfo['dual_camera_type']?>)
@@ -330,7 +330,7 @@
 								echo substr($storageStr, 0, -2);
 								?>
 							</span>
-							<?php if ($phoneInfo['expandable_storage'] == 'TRUE'): ?>
+							<?php if ($phoneInfo['expandable_storage'] == 't'): ?>
 							<span class="spec_table_item">Expandable memory via microSD</span>
 							<?php endif; ?>
 						</div>
@@ -357,7 +357,7 @@
 							<?php if (!is_null($phoneInfo['fast_charging_name'])): ?>
 							<span class="spec_table_item">Fast charging via <?=$phoneInfo['fast_charging_name']?></span>
 							<?php endif; ?>
-							<?php if (!is_null($phoneInfo['wireless_charging_standard'])): ?>
+							<?php if (!is_null($phoneInfo['wireless_charging_id'])): ?>
 							<span class="spec_table_item"><?=$phoneInfo['wireless_charging_standard']?> wireless charging</span>
 							<?php endif; ?>
 						</div>
@@ -391,7 +391,7 @@
 						<i class="fas fa-angle-down fa-fw"></i>
 						<div class="spec_table_spec_overview"><?=$phoneInfo['usb_type']?></div>
 						<div class="spec_table_spec">
-							<?php if ($phoneInfo['headphone_jack'] == 'TRUE'): ?>
+							<?php if ($phoneInfo['headphone_jack'] == 't'): ?>
 							<span class="spec_table_item">3.5mm jack</span>
 							<?php else: ?>
 							<span class="spec_table_item">No 3.5mm jack; dongle included</span>
@@ -405,10 +405,10 @@
 						<i class="fas fa-angle-down fa-fw"></i>
 						<div class="spec_table_spec_overview">
 							<?php if (!is_null($phoneInfo['glass_type'])): ?>
-							<?=$phoneInfo['glass_type']?> &middot;
+							<?=$phoneInfo['glass_type']?>
 							<?php endif; ?>
 							<?php if (!is_null($phoneInfo['water_resistance'])): ?>
-							IP<?=$phoneInfo['water_resistance']?>
+							 &middot; IP<?=$phoneInfo['water_resistance']?>
 							<?php endif; ?>
 						</div>
 						<div class="spec_table_spec">

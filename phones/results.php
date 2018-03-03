@@ -1,7 +1,7 @@
 <?php
 	$connectString = "dbname=ddccabuslay user=" . $_SERVER['DB_USER'];
 	$connection = pg_connect($connectString) or die('Could not connect: ' . pg_last_error());
-	$dbQuery = "select phone.id, oem.name, model, min(price) as price from makoto.oem, makoto.phone, makoto.phone_pricing, makoto.vendor where oem_id = oem.id and phone.id = phone_pricing.phone_id and vendor.is_carrier = FALSE and vendor.id = vendor_id group by phone.id, oem.name";
+	$dbQuery = "select phone.id, oem.name, model, min(price) as price from makoto.oem, makoto.phone, makoto.phone_pricing, makoto.vendor where oem_id = oem.id and phone.id = phone_pricing.phone_id and vendor.id = vendor_id group by phone.id, oem.name order by release, oem.name, model";
 	$results = pg_query($connection, $dbQuery);
 	$results_array = array();
 	$counter = 0;
