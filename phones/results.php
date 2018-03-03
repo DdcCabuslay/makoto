@@ -13,19 +13,17 @@
 		$counter++;
 	}
 ?>
-<div class="item_grid">
-	<?php foreach ($results_array as $result): ?>
-	<a href="phone.php?id=<?=$result['id']?>" class="item">
-		<img class="item_img" src="../images/phones/<?=$result['id']?>/thumb.jpg">
-		<div class="item_info">
-			<div class="item_name">
-				<?=$result['model']?>
-			</div>
-			<span class="item_oem">
-				<?=$result['oem']?>
-			</span>
-			<span class="item_primary_price">$<?=$result['price']?></span>
+<?php foreach ($results_array as $result): ?>
+<a href="phone.php?id=<?=$result['id']?>" class="item">
+	<img class="item_img" src="../images/phones/<?=$result['id']?>/thumb.jpg">
+	<div class="item_info">
+		<div class="item_name">
+			<?=$result['model']?>
 		</div>
-	</a>
-	<?php endforeach;?>
-</div>
+		<span class="item_oem">
+			<?=$result['oem']?>
+		</span>
+		<span class="item_primary_price">$<?=$result['price']?></span>
+	</div>
+</a>
+<?php endforeach;?>
