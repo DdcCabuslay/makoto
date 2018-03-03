@@ -23,14 +23,12 @@
 					<button>Filter</button>
 				</section>
 				<section>
-					<!-- <button>Compare</button> -->
 					<button>Sort</button>
 				</section>
 			</div>
-			<div class="item_grid">
-			<?php include 'results.php' ?>
-			</div>
+			<div class="item_grid"></div>
 		</section>
 	</main>
 </body>
+<script src="../scripts/results.js"></script>
 </html>
