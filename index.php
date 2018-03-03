@@ -35,8 +35,8 @@
 				<div class="home_hero_info">
 					<h2>Apple iPhone 8</h2>
 					<div>
-						<a href="phones/phone.php?id=5" class="button stroked_button">iPhone 8</a>
-						<a href="phones/phone.php?id=6" class="button stroked_button">iPhone 8 Plus</a>
+						<a href="phones/phone.php?id=3" class="button stroked_button">iPhone 8</a>
+						<a href="phones/phone.php?id=4" class="button stroked_button">iPhone 8 Plus</a>
 					</div>
 				</div>
 				<img src="images/home/iphone8.jpg">
