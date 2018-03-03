@@ -95,6 +95,11 @@ CREATE TABLE fast_charging(
 	fast_charging_name TEXT NOT NULL
 );
 
+CREATE TABLE wireless_charging(
+	id INT PRIMARY KEY,
+	wireless_charging_standard TEXT NOT NULL
+);
+
 CREATE TABLE usb(
 	id INT PRIMARY KEY,
 	usb_type TEXT NOT NULL
@@ -132,7 +137,6 @@ CREATE TABLE phone(
 	main_camera_aperture FLOAT(2) NOT NULL,
 	dual_camera_res FLOAT(3),
 	dual_camera_pixel_size FLOAT(3),
-	dual_camera_autofocus_id INT, -- 0 is no/fixed autofocus
 	dual_camera_stabilization_id INT, -- 0 is no stabilization
 	dual_camera_aperture FLOAT(2),
 	dual_camera_type_id INT,
@@ -153,6 +157,7 @@ CREATE TABLE phone(
 	-- battery 
 	battery_size INT NOT NULL,
 	fast_charging_id INT, -- NULL is no fast charging
+	wireless_charging_id INT,
 	-- wireless
 	wifi_5 BOOLEAN NOT NULL,
 	bluetooth_version FLOAT(2) NOT NULL,
@@ -173,12 +178,12 @@ CREATE TABLE phone(
 	FOREIGN KEY (main_camera_stabilization_id) REFERENCES stabilization(id),
 	FOREIGN KEY (main_camera_autofocus_id) REFERENCES autofocus(id),
 	FOREIGN KEY (main_camera_stabilization_id) REFERENCES stabilization(id),
-	FOREIGN KEY (dual_camera_autofocus_id) REFERENCES autofocus(id),
 	FOREIGN KEY (dual_camera_stabilization_id) REFERENCES stabilization(id),
 	FOREIGN KEY (dual_camera_type_id) REFERENCES dual_camera(id),
 	FOREIGN KEY (front_camera_autofocus_id) REFERENCES autofocus(id),
 	FOREIGN KEY (front_camera_stabilization_id) REFERENCES stabilization(id),
 	FOREIGN KEY (fast_charging_id) REFERENCES fast_charging(id),
+	FOREIGN KEY (wireless_charging_id) REFERENCES wireless_charging(id),
 	FOREIGN KEY (usb_id) REFERENCES usb(id),
 	FOREIGN KEY (sim_id) REFERENCES sim(id),
 	FOREIGN KEY (glass_id) REFERENCES glass(id)
