@@ -13,22 +13,43 @@
 <body>
 	<?php include 'header.php' ?>
 	<main>
-		<div class="hero home_hero">
-			<div class="home_hero_text">
-				<h1>Samsung Galaxy S9</h1>
-				<div class="home_hero_button_row">
-					<a class="button stroked_button" href="http://www.samsung.com/ca/smartphones/galaxy-s9/">Official Website</a>
-					<a href="phones/phone.php" class="button filled_button">More Info</a>
-				</div>
+		<div class="hero home_hero_main">
+			<h1>Choosing a phone can be hard.</h1>
+			<h2>Hopefully I can help.</h2>
+			<div class="home_hero_button_row">
+				<a class="button filled_button" href="phones">Browse Phones</a>
 			</div>
-			<img class="phone_hero_img" src="images/phones/home/s9.png">
 		</div>
-		<section id="new">
-			<!-- <?php include 'phones/results.php' ?> -->
-		</section>
-		<section id="top">
-			<!-- <?php include 'phones/results.php' ?> -->
-		</section>
+		<div class="hero home_hero_grid">
+			<div class="home_hero" style="background-color: #000;">
+				<div class="home_hero_info">
+					<h2 style="color: #fff;">Samsung Galaxy S9</h2>
+					<a href="phones/phone.php?id=10" class="button stroked_button" style="color: #fff; border-color: #fff;">More Info</a>
+				</div>
+				<img src="images/home/s9.jpg">
+			</div>
+			<div class="home_hero" style="background-color: #f4f4f4;">
+				<div class="home_hero_info">
+					<h2>Google Pixel 2 XL</h2>
+					<a href="phones/phone.php?id=0" class="button stroked_button">More Info</a>
+				</div>
+				<img src="images/home/0.jpg">
+			</div>
+			<div class="home_hero" style="background-color: #2b2b2b;">
+				<div class="home_hero_info">
+					<h2 style="color: #d8d8d8;">Essential Phone</h2>
+					<a href="phones/phone.php?id=9" class="button stroked_button" style="color: #d8d8d8; border-color: #d8d8d8;">More Info</a>
+				</div>
+				<img src="images/home/9.jpg">
+			</div>
+			<div class="home_hero" style="background-color: #fafafa;">
+				<div class="home_hero_info">
+					<h2>Apple iPhone X</h2>
+					<a href="phones/phone.php?id=2" class="button stroked_button">More Info</a>
+				</div>
+				<img src="images/home/2.jpg">
+			</div>
+		</div>
 	</main>
 </body>
 </html>

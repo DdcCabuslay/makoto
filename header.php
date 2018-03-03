@@ -15,9 +15,13 @@
 	<section>
 		<form class="search_form">
 			<input placeholder="Search Makoto">
-			<button class="search_button">
+			<button id="search_button" class="icon_button">
 				<i class="fas fa-search fa-fw"></i>
 			</button>
 		</form>
+		<button class="icon_button">
+			<i class="fas fa-list fa-fw"></i>
+			<div class="icon_button_overlay">1</div>
+		</button>
 	</section>
 </header>

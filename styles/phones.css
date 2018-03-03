@@ -1,9 +1,6 @@
-.hero {
-	background-color: #fff;
-}
-.hero img {
-	position: relative;
-	margin: auto;
-	width: 100%;
-	max-width: 1400px;
+.phone_hero {
+	background-color: white;
+	background-image: url('../images/home/phone_hero_main.jpg');
+	background-position: bottom;
+	background-repeat: no-repeat;
 }

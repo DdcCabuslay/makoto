@@ -153,8 +153,25 @@ footer {
 	margin-left: 0.25rem;
 	margin-right: 0.5rem;
 }
-.search_button {
+.icon_button {
+	position: relative;
 	border-radius: 50%;
+	width: 39px;
+	font-size: 1em;
+}
+.icon_button_overlay {
+	position: absolute;
+	display: none;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	right: 0px;
+	bottom: 0px;
+	font-size: 0.75em;
+}
+.search_form input {
+	width: 0px;
+	visibility: hidden;
 }
 .hero {
 	height: 400px;
@@ -163,15 +180,11 @@ footer {
 	margin: auto;
 	text-align: center;
 	position: relative;
-	overflow: hidden;
 }
 .hero h1 {
 	font-size: 3em;
-	margin: 1.5rem 0;
+	margin: 1.5rem 0 0;
 	z-index: 1;
-}
-.hero img {
-	position: absolute;
 }
 .stroked_button {
 	border: 1px solid;
@@ -201,9 +214,6 @@ footer {
 	.site_nav svg {
 		margin-left: 0.6rem;
 		margin-right: 0.5rem;
-	}
-	.search_form input {
-		width: 125px;
 	}
 	.hero {
 		height: 250px;

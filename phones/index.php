@@ -13,9 +13,8 @@
 <body>
 	<?php include 'header.php' ?>
 	<main>
-		<section class="hero">
+		<section class="hero phone_hero">
 			<h1>Phones</h1>
-			<img src="../images/phones/home/pixels.png">
 		</section>
 		<section id="phones">
 			<div class="item_grid_header">
