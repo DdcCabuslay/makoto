@@ -61,7 +61,7 @@
 		font-size: 1.5em;
 	}
 }
-@media (max-width: 400px) {
+@media (max-width: 425px) {
 	.home_hero img {
 		width: 100%;
 	}
