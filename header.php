@@ -20,7 +20,7 @@
 			</button>
 		</form>
 		<button class="icon_button">
-			<i class="fas fa-list fa-fw"></i>
+			<i class="fas fa-shopping-bag fa-fw"></i>
 			<div class="icon_button_overlay">1</div>
 		</button>
 	</section>
