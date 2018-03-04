@@ -5,7 +5,7 @@
 
 	$connectString = "dbname=ddccabuslay user=" . $_SERVER['DB_USER'];
 	$connection = pg_connect($connectString) or die('Could not connect: ' . pg_last_error());
-	$priceDbQuery = "select vendor.id, is_carrier, price, phone_pricing.url from makoto.phone_pricing, makoto.vendor where phone_id = $1 and storage = $2 and colour_id = $3 and vendor_id = vendor.id order by price, is_carrier, vendor.id";
+	$priceDbQuery = "select vendor.id, is_carrier, price, note, phone_pricing.url from makoto.phone_pricing, makoto.vendor where phone_id = $1 and storage = $2 and colour_id = $3 and vendor_id = vendor.id order by price, is_carrier, vendor.id";
 	$priceResults = pg_query_params($connection, $priceDbQuery, array($phone_id, $storage, $colour_id));
 	$priceArray = array();
 	$counter = 0;
@@ -15,6 +15,7 @@
 		$priceArray[$counter]['vendor_id'] = $row['id'];
 		$priceArray[$counter]['is_carrier'] = $row['is_carrier'];
 		$priceArray[$counter]['price'] = $row['price'];
+		$priceArray[$counter]['note'] = $row['note'];
 		$priceArray[$counter]['url'] = $row['url'];
 		if ($row['is_carrier'] == 't') {
 			$carrierLinks++;
@@ -44,7 +45,10 @@
 		<?php if ($price['is_carrier'] == 't'): ?>
 		<div class="dialog_cell">
 			<a target="_blank" rel="noopener noreferrer" href="<?= $price['url'] ?>" class="button price_button" style="background-image: url('../images/vendors/<?= $price['vendor_id'] ?>.png')"></a>
-			<span class="dialog_price">$<?= $price['price'] ?></span>
+			<div class="dialog_price">$<?= $price['price'] ?></div>
+			<?php if(!is_null($price['note'])): ?>
+			<div class="dialog_note"><?= $price['note'] ?></div>
+			<?php endif; ?>
 		</div>
 		<?php endif; ?>
 		<?php endforeach; ?>
@@ -55,7 +59,10 @@
 		<?php if ($price['is_carrier'] == 'f'): ?>
 		<div class="dialog_cell">
 			<a target="_blank" rel="noopener noreferrer" href="<?= $price['url'] ?>" class="button price_button" style="background-image: url('../images/vendors/<?= $price['vendor_id'] ?>.png')"></a>
-			<span class="dialog_price">$<?= $price['price'] ?></span>
+			<div class="dialog_price">$<?= $price['price'] ?></div>
+			<?php if(!is_null($price['note'])): ?>
+			<div class="dialog_note"><?= $price['note'] ?></div>
+			<?php endif; ?>
 		</div>
 		<?php endif; ?>
 		<?php endforeach; ?>

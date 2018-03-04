@@ -129,6 +129,9 @@ footer {
 	height: 50px;
 	border: 1px solid var(--shadow);
 }
+.dialog_note {
+	font-size: 0.7em;
+}
 .dialog_footer {
 	padding: 0.5rem 1rem;
 	text-align: right;

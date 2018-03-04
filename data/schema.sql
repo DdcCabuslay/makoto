@@ -228,6 +228,7 @@ CREATE TABLE phone_pricing(
 	storage INT NOT NULL,
 	colour_id INT NOT NULL,
 	price FLOAT(6) NOT NULL,
+	note TEXT,
 	url TEXT NOT NULL,
 	PRIMARY KEY (phone_id, vendor_id, storage, colour_id, url, price),
 	FOREIGN KEY (phone_id) REFERENCES phone(id),
