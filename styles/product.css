@@ -261,12 +261,18 @@
 		grid-template-columns: 1fr;
 		grid-gap: 0;
 	}
+	.spec_table_spec, .highlights_table {
+		grid-template-columns: 1fr;
+	}
+	.spec_table_spec > .spec_table_subtable:nth-child(2) {
+		grid-row: 3;
+	}
 }
 @keyframes expand_row {
 	from {opacity: 0; max-height: 0px}
-	to {opacity: 1; max-height: 600px}
+	to {opacity: 1; max-height: 1000px}
 }
 @keyframes collapse_row {
-	from {opacity: 1; max-height: 600px}
+	from {opacity: 1; max-height: 1000px}
 	to {opacity: 0; max-height: 0px}
 }

@@ -366,7 +366,7 @@
 						<h4 class="spec_table_header">Wireless</h4>
 						<i class="fas fa-angle-down fa-fw"></i>
 						<div class="spec_table_spec_overview">
-							<?php if ($phoneInfo['wifi_5']): ?>
+							<?php if ($phoneInfo['wifi_5'] == 't'): ?>
 							Wi-Fi 2.4G + 5G &middot; Bluetooth <?=number_format($phoneInfo['bluetooth_version'], 1)?>
 							<?php else: ?>
 							Wi-Fi 2.4G &middot; Bluetooth <?=number_format($phoneInfo['bluetooth_version'], 1)?>
@@ -374,14 +374,14 @@
 						</div>
 						<div class="spec_table_spec">
 							<span class="spec_table_item">
-							<?php if ($phoneInfo['wifi_5'] == 'TRUE'): ?>
+							<?php if ($phoneInfo['wifi_5'] == 't'): ?>
 							Wi-Fi 2.4G + 5G
 							<?php else: ?>
 							Wi-Fi 2.4G
 							<?php endif;?>								
 							</span>
 							<span class="spec_table_item">Bluetooth <?=number_format($phoneInfo['bluetooth_version'], 1)?></span>
-							<?php if ($phoneInfo['nfc'] == 'TRUE'): ?>
+							<?php if ($phoneInfo['nfc'] == 't'): ?>
 							<span class="spec_table_item">NFC</span>
 							<?php endif;?>
 						</div>
