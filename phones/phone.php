@@ -156,7 +156,8 @@
 					<div class="info_window_footer">
 						<!-- cheapest vendor price -->
 						<!-- <a target="_blank" rel="noopener noreferrer" href="<?= $cheapestVendorPrice['url'] ?>" class="button filled_button">$<?= $cheapestVendorPrice['price'] ?> on <?= $cheapestVendorPrice['name'] ?></a> -->
-						<button id="pricing_button" class="filled_button">Carrier and Vendor Pricing</button>
+						<button id="add_to_bag_button" class="filled_button">Add to Bag</button>
+						<button id="pricing_button" class="stroked_button">View Pricing</button>
 					</div>
 				</div>
 			</div>

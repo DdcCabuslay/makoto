@@ -39,7 +39,7 @@
 	box-shadow: 0px 12px 24px var(--shadow);
 	padding: 1rem 1rem 0;
 }
-.info_window, .price_listing_row, .info_window_row,
+.info_window, .info_window_footer, .price_listing_row, .info_window_row,
 .product_details > div, .highlights_table, .spec_table, .spec_table_spec,
 .spec_table_row, .spec_table_subtable {
 	display: grid;
@@ -107,9 +107,11 @@
 	margin: auto;
 }
 .storage_row {
-	grid-template-columns: repeat(3, auto);
+	grid-template-columns: repeat(3, 1fr);
 }
 .info_window_footer {
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0.5rem;
 	margin: 0.5rem 0;
 }
 .info_window_footer button, .info_window_footer .button {
