@@ -1,5 +1,6 @@
 html, button, input {
-	font-family: 'acumin-pro', sans-serif;
+	font-family: "europa-n4", "europa", sans-serif;
+	font-weight: 400;
 }
 body {
 	margin: 0;
@@ -38,9 +39,10 @@ header section > *:last-child {
 	margin-right: 1rem;
 }
 button, .button {
-	/*font-size: 0.875em;	*/
+	font-size: 0.875em;
 }
-h1, h2, h3, button, .button {
+h1, h2, h3, h4, h5, button, .button {
+	font-family: "europa-n7", "europa", sans-serif;
 	font-weight: 700;
 }
 a, svg {
