@@ -1,5 +1,5 @@
 html, button, input {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'acumin-pro', sans-serif;
 }
 body {
 	margin: 0;
@@ -38,10 +38,10 @@ header section > *:last-child {
 	margin-right: 1rem;
 }
 button, .button {
-	font-size: 0.875em;	
+	/*font-size: 0.875em;	*/
 }
 h1, h2, h3, button, .button {
-	font-weight: 600;
+	font-weight: 700;
 }
 a, svg {
 	text-decoration: none;
@@ -138,7 +138,7 @@ footer {
 	margin-top: 1rem;
 }
 .site_header {
-	font-weight: 600;
+	font-weight: 700;
 }
 .site_nav a {
 	transition: color 0.2s;

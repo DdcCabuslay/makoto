@@ -49,7 +49,7 @@
 	margin: 0.5rem;
 }
 .item_name, .item_primary_price {
-	font-weight: 600;
+	font-weight: 700;
 }
 .item_name, .item_oem {
 	white-space: nowrap;

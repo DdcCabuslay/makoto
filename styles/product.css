@@ -53,7 +53,7 @@
 	font-size: 2em;
 }
 .info_window .product_oem {
-    font-weight: 600;
+    font-weight: 700;
 }
 .info_window_row {
 	grid-gap: 0.5rem;
@@ -76,7 +76,7 @@
     float: left;
     width: 1.25em;
     margin-left: -1.25em;
-    font-weight: 600;
+    font-weight: 700;
 }
 .positive_highlights li:before {
 	content: "+";
