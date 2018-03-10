@@ -20,7 +20,7 @@ p, .highlights_table ul {
 }
 .product_image {
 	display: block;
-	max-height: 80%;
+	max-height: 1000px;
 	width: 100%;
 	object-fit: contain;
 	margin: auto;
@@ -39,7 +39,7 @@ p, .highlights_table ul {
 	margin: auto 1rem;
 	max-width: 30rem;
 	border-radius: 4px;
-	box-shadow: 0px 12px 24px var(--shadow);
+	border: 1px solid var(--shadow);
 	padding: 1rem 1rem 0;
 }
 .info_window, .info_window_footer, .price_listing_row, .info_window_row,
@@ -87,7 +87,7 @@ p, .highlights_table ul {
 }
 .negative_highlights li:before {
 	content: "\2212";
-    color: var(--text-dark-translucent);
+    color: var(--dark-grey);
 }
 .info_window_row_button_active {
 	border: 1px solid var(--shadow);
@@ -247,7 +247,7 @@ p, .highlights_table ul {
 		width: 100%;
 	}
 	.info_window {
-		box-shadow: none;
+		border: none;
 		padding: 0;
 		margin: 0;
 		max-width: 100%;

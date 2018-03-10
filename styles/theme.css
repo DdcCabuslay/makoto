@@ -7,7 +7,7 @@
 	--accent-light: hsl(210, 73%, 75%);
 	--accent-translucent: hsla(210, 73%, 53%, 0.6);
 	--accent-gradient-translucent: hsla(225, 73%, 53%, 0.6);
-	--grey: hsl(203, 0%, 20%);
+	--dark-grey: hsl(203, 0%, 20%);
 	--white-translucent: hsla(0, 0%, 100%, 0.8);
 	--light-grey-translucent: hsla(0, 0%, 95%, 0.8);
 	--text-dark-translucent: hsla(0, 0%, 30%, 0.8);
@@ -28,8 +28,8 @@ header a:hover, .site_nav a:hover, .site_nav a:hover > svg,
 header input {
 	background-color: var(--light-grey-translucent);
 }
-h1, h2, h3, h4 {
-	color: #000;
+h1, h2, h3, h4, .spec_table_row svg {
+	color: var(--dark-grey);
 }
 a, button, .button, button:hover, .button:hover, .hero h1, .hero h2 {
 	color: var(--text-dark-translucent);
@@ -41,7 +41,7 @@ button:hover, .button:hover {
 	background-color: var(--shadow-light);
 }
 footer {
-	background-color: var(--grey);
+	background-color: var(--dark-grey);
 	color: hsl(0, 0%, 80%);	
 }
 .dialog_area {
