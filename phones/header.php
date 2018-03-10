@@ -6,10 +6,6 @@
 				<i class="fas fa-mobile fa-fw"></i>
 				<span class="nav_title">Phones</span>
 			</a>
-			<!-- <a href="../laptops">
-				<i class="fas fa-laptop fa-fw"></i>
-				<span class="nav_title">Laptops</span>
-			</a> -->
 		</nav>
 	</section>
 	<section>
@@ -19,9 +15,9 @@
 				<i class="fas fa-search fa-fw"></i>
 			</button>
 		</form>
-		<button class="icon_button">
+		<a href="../bag" class="button icon_button">
 			<i class="fas fa-shopping-bag fa-fw"></i>
-			<div class="icon_button_overlay">1</div>
-		</button>
+			<div class="icon_button_overlay"></div>
+		</a>
 	</section>
 </header>
