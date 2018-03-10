@@ -167,7 +167,7 @@ footer {
 .icon_button {
 	position: relative;
 	border-radius: 50%;
-	width: 39px;
+	/*width: 39px;*/
 	font-size: 1em;
 }
 .icon_button_overlay {

@@ -22,7 +22,7 @@ html {
 }
 header a:hover, .site_nav a:hover, .site_nav a:hover > svg,
 .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg,
-.item_primary_price, .product_oem {
+.product_oem, .info_window_row_button_active {
 	color: var(--accent-main);
 }
 header input {
@@ -71,9 +71,6 @@ footer {
 }
 .opaque, .item {
 	background-color: #fff;
-}
-.info_window_row_button_active {
-	color: var(--accent-main);
 }
 @media (max-width: 767px) {
 	.info_window {
