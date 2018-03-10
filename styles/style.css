@@ -103,11 +103,14 @@ footer {
 	transform: translateY(-100px);
 	border-radius: 4px;
 }
-.dialog_header h2 {
-	margin-bottom: 0;
+.dialog_header, .dialog_footer {
+	padding: 1rem;
 }
-.dialog > section:not(.dialog_footer) {
-	padding: 0 1rem;
+.dialog_header h2 {
+	margin: 0;
+}
+.dialog_body {
+	padding: 0 1rem 1rem;
 }
 .dialog_body {
 	display: grid;
@@ -118,6 +121,9 @@ footer {
 }
 .dialog_body > h3 {
 	grid-column: 1 / -1;
+}
+.dialog_body > h3:first-child {
+	margin-top: 0;
 }
 .dialog_cell {
 	display: flex;
@@ -137,7 +143,6 @@ footer {
 .dialog_footer {
 	padding: 0.5rem 1rem;
 	text-align: right;
-	margin-top: 1rem;
 }
 .site_header {
 	font-weight: 700;

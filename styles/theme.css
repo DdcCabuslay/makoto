@@ -1,16 +1,16 @@
 :root {
 	--accent-main: hsl(210, 73%, 53%);
-	--accent-gradient: hsl(220, 73%, 53%);
+	--accent-gradient: hsl(225, 73%, 53%);
 	--accent-highlight: hsl(210, 73%, 60%);
-	--accent-gradient-highlight: hsl(220, 73%, 60%);
+	--accent-gradient-highlight: hsl(225, 73%, 60%);
 	--accent-dark: hsl(210, 73%, 35%);
-	--accent-text: hsl(210, 73%, 90%);
+	--accent-light: hsl(210, 73%, 75%);
 	--accent-translucent: hsla(210, 73%, 53%, 0.6);
-	--accent-gradient-translucent: hsla(220, 73%, 53%, 0.6);
+	--accent-gradient-translucent: hsla(225, 73%, 53%, 0.6);
 	--grey: hsl(203, 0%, 20%);
 	--white-translucent: hsla(0, 0%, 100%, 0.8);
 	--light-grey-translucent: hsla(0, 0%, 95%, 0.8);
-	--text-dark-translucent: hsla(0, 0%, 15%, 0.8);
+	--text-dark-translucent: hsla(0, 0%, 30%, 0.8);
 	--shadow: hsla(0, 0%, 0%, 0.2);
 	--shadow-light: hsla(0, 0%, 0%, 0.08);
 }
@@ -57,22 +57,23 @@ footer {
 	background: var(--accent-main);
 	color: white;
 }
-.stroked_button {
-	border-color: var(--text-dark-translucent);
+.stroked_button, .stroked_button:hover {
+	border-color: var(--shadow);
 }
 .filled_button {
 	background: linear-gradient(var(--accent-main), var(--accent-gradient));
-	/*background: var(--accent-main);*/
 }
 .filled_button:hover {
 	background: linear-gradient(var(--accent-highlight), var(--accent-gradient-highlight));
-	/*background: var(--accent-highlight);*/
 }
 .filled_button, .filled_button:hover {
 	color: #fff;
 }
 .opaque, .item {
 	background-color: #fff;
+}
+.info_window_row_button_active {
+	color: var(--accent-main);
 }
 @media (max-width: 767px) {
 	.info_window {
