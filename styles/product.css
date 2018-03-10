@@ -35,21 +35,30 @@ p, .highlights_table ul {
 	height: 50px;
 	margin: 0 0.5rem;
 }
-.info_window {
-	margin: auto 1rem;
-	max-width: 30rem;
-	border-radius: 4px;
-	box-shadow: 0px 2px 6px var(--shadow);
-	padding: 1rem 1rem 0;
-}
 .info_window, .info_window_footer, .price_listing_row, .info_window_row,
 .product_details > div, .highlights_table, .spec_table, .spec_table_spec,
 .spec_table_row, .spec_table_subtable {
 	display: grid;
 }
+.info_window {
+	margin: auto 1rem;
+	max-width: 30rem;
+	border-radius: 4px;
+	box-shadow: 0px 2px 6px var(--shadow);
+	/*padding: 1rem 1rem 0;*/
+}
+.info_window > * {
+	padding: 0 1rem;
+}
+.info_window > *:first-child {
+	padding-top: 1rem;
+}
+.info_window > *:last-child {
+	padding-bottom: 1rem;
+}
 .info_window h1, .info_window h2, .info_window h3 {
 	margin: 0;
-	padding: 0.5rem 0;
+	/*padding: 0.5rem 0;*/
 }
 .info_window h1 {
 	padding-top: 0;
@@ -114,13 +123,13 @@ p, .highlights_table ul {
 .info_window_footer {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 0.5rem;
-	margin: 0.5rem 0;
+	margin-top: 1rem;
 }
 .info_window_footer button, .info_window_footer .button {
 	display: block;
 	width: 100%;
 	padding: 1rem 0;
-	margin: 0.5rem 0;
+	margin-top: 1rem;
 	text-transform: none;
 	text-align: center;
 }
@@ -140,7 +149,7 @@ p, .highlights_table ul {
 	grid-gap: 1rem;
 }
 .product_details {
-	padding-top: 2rem;
+	padding-top: 1.5rem;
 }
 .product_details h3 {
 	margin-bottom: 0.5rem;
@@ -252,8 +261,8 @@ p, .highlights_table ul {
 		margin: 0;
 		max-width: 100%;
 	}
-	.info_window h2, .info_window h3 {
-		padding: 1rem 0;
+	.info_window > * {
+		padding: 0;
 	}
 	.highlights_table ul {
 	    margin-bottom: 0.5rem;

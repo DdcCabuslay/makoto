@@ -198,10 +198,10 @@ footer {
 	z-index: 1;
 }
 .stroked_button {
-	border: 1px solid;
+	border: 2px solid;
 }
 .filled_button {
-	padding: calc(0.5rem + 1px);
+	padding: calc(0.5rem + 2px);
 }
 @media (max-width: 1399px) {
 	main > *:not(.hero) {

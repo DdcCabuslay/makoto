@@ -115,7 +115,7 @@
 			</div>
 			<div class="product_info">
 				<div class="info_window">
-					<span class="product_oem"><?= $phoneInfo['oem_name'] ?></span>
+					<h3 class="product_oem"><?= $phoneInfo['oem_name'] ?></h3>
 					<h1 class="product_title"><?= $phoneInfo['model'] ?></h1>
 					<div id="product_highlights">
 						<div class="highlights_table">

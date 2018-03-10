@@ -4,7 +4,7 @@
 	--accent-highlight: hsl(210, 73%, 60%);
 	--accent-gradient-highlight: hsl(225, 73%, 60%);
 	--accent-dark: hsl(210, 73%, 35%);
-	--accent-light: hsl(210, 73%, 75%);
+	--accent-light: hsl(210, 73%, 85%);
 	--accent-translucent: hsla(210, 73%, 53%, 0.6);
 	--accent-gradient-translucent: hsla(225, 73%, 53%, 0.6);
 	--dark-grey: hsl(203, 0%, 20%);
@@ -22,7 +22,7 @@ html {
 }
 header a:hover, .site_nav a:hover, .site_nav a:hover > svg,
 .site_nav > .nav_selected, .site_nav > .nav_selected:hover, .nav_selected svg,
-.product_oem, .info_window_row_button_active {
+.stroked_button, .stroked_button:hover, .product_oem, .info_window_row_button_active {
 	color: var(--accent-main);
 }
 header input {
@@ -47,7 +47,7 @@ footer {
 .dialog_area {
 	background: var(--white-translucent);	
 }
-.dialog_footer {
+.dialog_footer, .info_window_footer {
 	background-color: var(--light-grey-translucent);
 }
 .site_header {
@@ -58,7 +58,7 @@ footer {
 	color: white;
 }
 .stroked_button, .stroked_button:hover {
-	border-color: var(--shadow);
+	border-color: var(--accent-light);
 }
 .filled_button {
 	background: linear-gradient(var(--accent-main), var(--accent-gradient));
@@ -74,6 +74,9 @@ footer {
 }
 @media (max-width: 767px) {
 	.info_window {
-		background: #fff;
+		background: transparent;
+	}
+	.info_window_footer {
+		background-color: transparent;
 	}
 }
