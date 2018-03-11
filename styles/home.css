@@ -1,67 +1,30 @@
-.home_hero_main {
-	height: 500px;
-	background-color: white;
-	background-image: url('../images/home/phone_hero_main.jpg');
-	background-position: bottom;
+html {
+	background-image: url('../images/home/kevin-bhagat-461952-unsplash.jpg');	
+	background-position: top;
 	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	background-color: var(--text-dark-translucent);
+	background-size: cover;
 }
-.home_hero_grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+html, a, h1, h2, header svg {
+	color: var(--white-translucent);
 }
-.home_hero {
-	display: grid;
-	grid-template-columns: 1fr calc(400px + 0.5rem);
-	height: 400px;
+.site_header {
+	border-bottom: 1px solid transparent;
 }
-.home_hero img {
-	align-self: end;
-	height: 100%;
-}
-.home_hero_info {
+main {
+	height: calc(100vh - 57px);
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
-@media (max-width: 1400px) {
-	.home_hero {
-		grid-template-columns: 1fr calc(250px + 0.5rem);
-		height: 250px;
-	}
+main > *:not(.hero) {
+	margin: auto;
+	text-align: center;
 }
-@media (max-width: 1023px) {
-	.home_hero {
-		grid-template-columns: 1fr calc(200px + 0.5rem);
-		height: 200px;
-	}
-}
-@media (max-width: 767px) {
-	.home_hero_grid {
-		grid-template-columns: 1fr;
-		grid-gap: 0.5rem;
-	}
-	.home_hero {
-		grid-template-columns: 1fr;
-		grid-gap: 1.5rem;
-		height: initial;
-	}
-	.home_hero img {
-		margin: auto;
-		height: initial;
-	}
-}
-@media (max-width: 676px) {
-	.home_hero_main h1 {
-		font-size: 2em;
-		margin-bottom: 0px;
-	}
-	.home_hero_main h2 {
-		font-size: 1.5em;
-	}
-}
-@media (max-width: 425px) {
-	.home_hero img {
-		width: 100%;
-	}
+.home_hero_attribution {
+	font-size: xx-small;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
 }

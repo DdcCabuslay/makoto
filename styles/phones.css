@@ -1,6 +1,11 @@
 .phone_hero {
-	background-color: white;
-	background-image: url('../images/home/phone_hero_main.jpg');
-	background-position: bottom;
+	background-color: var(--text-dark-translucent);
+	background-image: url('../images/home/pexels-photo-261628.jpeg');
+	background-position: center;
 	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	background-size: cover;
+}
+.phone_hero h1 {
+	color: var(--white-translucent);
 }

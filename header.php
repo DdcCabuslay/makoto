@@ -1,12 +1,12 @@
 <header class="site_header">
 	<section>
 		<a href="." class="header_logo">Makoto</a>
-		<nav class="site_nav">
+		<!-- <nav class="site_nav">
 			<a href="phones">
 				<i class="fas fa-mobile fa-fw"></i>
 				<span class="nav_title">Phones</span>
 			</a>
-		</nav>
+		</nav> -->
 	</section>
 	<section>
 		<form class="search_form">
